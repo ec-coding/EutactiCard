@@ -27,7 +27,7 @@ body {
   display: flex;
   place-items: center;
   min-width: 320px;
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 
 h1 {
@@ -65,4 +65,27 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+
+/* MUI PRESET OVERRIDE */
+
+.Adv-Search .Mui-Accordion {
+  margin: 0 !important
+}
+
+.Adv-Search .MuiAccordionDetails-root {
+  padding: 0 1rem !important;
+}
+
+.Adv-Search .MuiPaper-root {
+    border-top-left-radius: 0px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+}
+
+.Adv-Search .MuiAccordion-rounded {
+  background-color: rgb(192, 192, 192);
+  border: 1px solid black
 }
