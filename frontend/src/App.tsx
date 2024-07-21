@@ -33,7 +33,7 @@ function App() {
           <CssBaseline />
           <Header />
           <AppRoutes />
-          {/* <Footer /> */}
+          <Footer />
         </ThemeProvider>
       </Router>
     </>
