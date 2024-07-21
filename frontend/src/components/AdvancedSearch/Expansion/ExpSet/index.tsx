@@ -25,8 +25,8 @@ const ExpSet = ({ name, icon, logo, uncheckedBg, checkedBg }: { name: string, ic
     const Img = styled('img')({
         margin: 'auto',
         display: 'block',
-        maxWidth: '92px',
-        maxHeight: '42px',
+        maxWidth: '83px',
+        maxHeight: '38px',
         borderRadius: '4px',
         objectFit: 'cover',
         objectPosition: 'center',
@@ -39,29 +39,24 @@ const ExpSet = ({ name, icon, logo, uncheckedBg, checkedBg }: { name: string, ic
     });
 
     return (
-        <Card
+        <Grid
+            lg={3.75}
             sx={{
-                width: {
-                    xs: '290px',
-                },
-                paddingY: '5px',
-                boxShadow: '2px 2px 4px black',
+                marginTop: '-1px',
+                marginX: '7.5px',
+                paddingY: '2.5px',
+                backgroundColor: 'inherit',
+                borderTop: '1px solid black',
+                borderBottom: '1px solid black'
             }}
         >
             <Grid
                 container
                 alignItems="center"
-                justifyContent="space-between" // Aligns items to the left and right
             >
-                <Grid item sm={4}
-                    marginLeft="2px"
-                    marginRight="4px"
-                    sx={{ borderRadius: '50%' }}
-                >
-                    <Img src={logo} />
-                </Grid>
-                <Grid item sm={1}
-                    marginRight="4px"
+                <Grid item container xs={1.35}
+                    alignItems="center"
+                    justifyContent="center"
                 >
                     <Checkbox
                         checked={checked}
@@ -70,20 +65,27 @@ const ExpSet = ({ name, icon, logo, uncheckedBg, checkedBg }: { name: string, ic
                         color="primary" // Change the color to primary
                     />
                 </Grid>
-                <Grid item sm={5}
-                    sx={{ marginRight: 'auto' }}>
+                <Grid item container xs={4} lg={3}
+                    sx={{ borderRadius: '50%' }}
+                >
+                    <Img src={logo} />
+                </Grid>
+                <Grid item container xs={5} lg={6}
+                    alignItems="center"
+                    justifyContent="center"
+                >
                     <Typography
-                    sx={{ fontSize: '14px' }}
+                        sx={{ fontSize: '14px' }}
                     >
                         {name}
                     </Typography>
                 </Grid>
-                <Grid item sm={1}
-                    sx={{ marginRight: 'auto' }}>
+                <Grid item container xs={1}
+                    alignContent="flex-start">
                     <Img2 src={icon} />
                 </Grid>
             </Grid>
-        </Card>
+        </Grid>
     )
 }
 

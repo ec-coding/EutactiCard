@@ -6,9 +6,13 @@ import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import Expansion from './AdvancedSearch/Expansion';
-import CardType from './AdvancedSearch/CardType';
-import Rarity from './AdvancedSearch/Rarity';
+import Expansion from './Expansion';
+import CardType from './CardType';
+import Rarity from './Rarity';
+import HitPoints from './HitPoints';
+import RetreatCost from './RetreatCost';
+import Weakness from './Weakness';
+import Resistance from './Resistance';
 
 const AdvSearch = () => {
     const [expanded, setExpanded] = React.useState(false);
@@ -27,7 +31,9 @@ const AdvSearch = () => {
             sx={{
                 '& .MuiAccordion-region': { height: expanded ? 'auto' : 0 },
                 '& .MuiAccordionDetails-root': { display: expanded ? 'block' : 'none' },
-                '& .MuiPaper-root .MuiPaper-elevation .MuiPaper-rounded': { margin: '0' }
+                '& .MuiPaper-root .MuiPaper-elevation .MuiPaper-rounded': { margin: '0' },
+                // maxHeight: '562px', // Set maximum height to 100% of its containing element
+                overflowY: 'auto',
             }}
         >
             <AccordionSummary
@@ -39,11 +45,15 @@ const AdvSearch = () => {
                     border: '1px solid black'
                 }}
             >
-                <Typography color="white">Expand All</Typography>
+                <Typography color="white">Advanced Search</Typography>
             </AccordionSummary>
             <Expansion />
             <CardType />
             <Rarity />
+            <HitPoints />
+            <RetreatCost />
+            <Weakness />
+            <Resistance />
         </Accordion>
     )
 }

@@ -22,7 +22,7 @@ const Header = () => {
     textTransform: 'none',
     color: 'yellow',
     fontWeight: 'bold',
-    fontSize: 20,
+    fontSize: 18,
     transition: 'color 0.3s ease',
     marginLeft: 0.5,
     marginRight: 0.5,
@@ -37,7 +37,7 @@ const Header = () => {
     textTransform: 'none',
     color: 'white',
     fontWeight: 'normal',
-    fontSize: 20,
+    fontSize: 18,
     transition: 'color 0.3s ease',
     marginLeft: 0.5,
     marginRight: 0.5,
@@ -50,12 +50,14 @@ const Header = () => {
   return (
     <div>
       <AppBar position="static" color="default">
-        <Container maxWidth={false}
+        <Grid container justifyContent="center"
           sx={{
-            background: 'linear-gradient(to right, #ff3333, #ff6666, #ff3333)',
+            background: 'linear-gradient(to bottom, #E83838 60%, #884041 100%)',
+            // borderTop: '1px solid #ff6565',
+            // borderBottom: '1px solid #ff6565'
           }}
         >
-          <Toolbar
+          <Box
             sx={{
               width: {
                 xs: '100%',
@@ -64,14 +66,13 @@ const Header = () => {
                 lg: '1024px',
                 xl: '1280px'
               },
-              marginX: 'auto',
+              padding: 0
             }}
           >
             <Grid container
               sx={{
-                gap: 4
               }}>
-              <Grid paddingTop={1}>
+              <Grid lg={2} paddingTop={1} container>
                 <Link to="/">
                   <img
                     src="https://i.imgur.com/HgSy1Gq.png"
@@ -129,8 +130,8 @@ const Header = () => {
                 </Grid>
               )}
             </Grid>
-          </Toolbar>
-        </Container>
+          </Box>
+        </Grid>
       </AppBar>
     </div>
   )
