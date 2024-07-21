@@ -75,7 +75,16 @@ button:focus-visible {
 }
 
 .Adv-Search .MuiAccordionDetails-root {
-  padding: 0 1rem !important;
+  padding: 0 7.5px !important;
+}
+
+.Adv-Search .Mui-Accordion-Inner {
+  padding: 0 12.5px !important;
+}
+
+.Adv-Search .MuiGrid-root {
+  display: flex;
+  align-content: flex-start !important;
 }
 
 .Adv-Search .MuiPaper-root {
@@ -86,6 +95,20 @@ button:focus-visible {
 }
 
 .Adv-Search .MuiAccordion-rounded {
-  background-color: rgb(192, 192, 192);
+  background-color: rgb(212, 212, 212);
   border: 1px solid black
+}
+
+.Adv-Search .Mui-Accordion-Inner {
+  background-color: rgb(255, 255, 255)
+}
+
+/* ELEMENT BACKGROUNDS */
+
+.m-0 {
+  margin: 0;
+}
+
+.footer-bg {
+  background: linear-gradient(to bottom, #2691C7 0%,#2C8CC3 50%, #713f3f 100%)
 }

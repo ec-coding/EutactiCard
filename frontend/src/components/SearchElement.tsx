@@ -3,85 +3,75 @@ import { Card, Grid, Typography } from "@mui/material"
 import Checkbox from '@mui/material/Checkbox';
 import Switch from '@mui/material/Switch';
 
-const SearchElement = ({ customProp, uncheckedBg, checkedBg }: { customProp: string, uncheckedBg: string, checkedBg: string }) => {
+const SearchElement = ({ customProp, background }: { customProp: string, background: string }) => {
     const [checked, setChecked] = useState(false);
-    const [background, setBackground] = useState(uncheckedBg);
 
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-        setChecked(event.target.checked);
-        updateElementBg(event.target.checked);
+    const handleChange = () => {
+        setChecked((prev) => !prev);
     };
 
-    const updateElementBg = (isChecked: boolean) => {
-        console.log(isChecked)
-        console.log(customProp)
+    const boxShadow = checked
+        ? '1.5px 1.5px 0.5em black, inset -1.5px -1.5px 0 rgba(255, 255, 255, .75), inset 1.5px 1.5px 0 rgba(0, 0, 0, 0.75)'
+        : '1.5px 1.5px 0.5em black, inset 1.5px 1.5px 0 rgba(255, 255, 255, 0.75), inset -1.5px -1.5px 0 rgba(0, 0, 0, 0.75)'
 
-        if (isChecked === false) {
-
-            setBackground(uncheckedBg)
-        } else {
-
-            setBackground(checkedBg)
-        }
-    }
-
-
-
-return (
-    <Card
+    return (
+        <Grid item lg={3.75}
+        onClick={handleChange}
         sx={{
-            border: '1px solid grey',
-            borderRadius: '25px',
-            boxShadow: '2px 2px 4px black',
-            width: {
-                xs: '220px',
-            },
-            backgroundImage: `url(${background})`, // Set the background image
-            backgroundSize: 'cover', // Optional: Ensure the image covers the entire container
-            backgroundRepeat: 'no-repeat', // Optional: Prevent the image from repeating
-            backgroundPosition: 'center', // Optional: Center the image within the container
+            background: 'darkGrey',
+            border: checked ? '2px solid orange' : '2px solid lightGrey',
+            borderRadius: '5px',
         }}
-    >
-        <Grid
-            container
-            alignItems="center"
-            justifyContent="space-between" // Aligns items to the left and right
         >
-            <Grid item
-                marginLeft="8px"
-                marginRight="12px"
-
+            <Card
                 sx={{
-
-                    borderRadius: '50%'
+                    boxShadow: boxShadow,
+                    margin: '1px',
+                    paddingY: '5px',
+                    borderRadius: '5px',
+                    backgroundImage: `${background}`, // Set the background image
+                    backgroundSize: 'cover', // Optional: Ensure the image covers the entire container
+                    backgroundRepeat: 'no-repeat', // Optional: Prevent the image from repeating
+                    backgroundPosition: 'center', // Optional: Center the image within the container
                 }}
             >
-                <div className={`icon-${customProp}`}></div>
-
-            </Grid>
-            <Grid item sx={{ marginRight: 'auto' }}>
-                <Typography
-                    sx={{
-                        color: 'white',
-                        textAlign: 'right',
-                        textShadow: '1.5px 1.5px 0 black, -1.5px -1.5px 0 black, 1.5px -1.5px 0 black, -1.5px 1.5px 0 black'
-                    }}
-                    variant="h6"
+                <Grid
+                    container
+                    alignItems="center"
+                    justifyContent="space-between" // Aligns items to the left and right
                 >
-                    {customProp}
-                </Typography>
-            </Grid>
-            <Grid item>
-                <Switch
-                    checked={checked}
-                    onChange={handleChange}
-                    inputProps={{ 'aria-label': `${customProp}` }}
-                    color="primary" // Change the color to primary
-                />
-            </Grid>
+                    <Grid item
+                        marginLeft="8px"
+                        marginRight="12px"
+
+                        sx={{
+                            borderRadius: '50%',
+                            transform: checked ? 'translateY(1px) translateX(0.25px)' : 'translateY(0) translateX(0)',
+                            transition: 'transform 0s ease',
+                        }}
+                    >
+                        <div className={`icon-${customProp} m-0`}></div>
+
+                    </Grid>
+                    <Grid item sx={{ marginRight: 'auto' }}>
+                        <Typography
+                            sx={{
+                                color: 'white',
+                                textAlign: 'right',
+                                textShadow: '1.5px 1.5px 2px black',
+                                transform: checked ? 'translateY(1px) translateX(0.25px)' : 'translateY(0) translateX(0)',
+                                transition: 'transform 0s ease',
+                                fontSize: '14px'
+                            }}
+                            variant="body1"
+                        >
+                            {customProp.toUpperCase()}
+                        </Typography>
+                    </Grid>
+                </Grid>
+            </Card>
         </Grid>
-    </Card>
-)
+    )
 }
 
 export default SearchElement

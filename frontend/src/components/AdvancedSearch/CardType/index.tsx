@@ -10,9 +10,7 @@ import TypeEntry from './TypeEntry';
 
 const CardType = () => {
     return (
-        <Accordion
-            className="Mui-Accordion"
-        >
+        <Accordion className="Mui-Accordion">
             <AccordionSummary
                 expandIcon={<ExpandMoreIcon />}
             >
