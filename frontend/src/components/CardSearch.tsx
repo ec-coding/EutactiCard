@@ -201,7 +201,6 @@ const CardSearch = () => {
                     </Grid>
                     <Grid item container lg={12} gap={2} marginTop={12} justifyContent="center">
                         <Button
-                            href="/"
                             variant="contained"
                             color="primary"
                             sx={{
@@ -218,7 +217,6 @@ const CardSearch = () => {
                             Reset
                         </Button>
                         <Button
-                            href="/AboutUs"
                             variant="contained"
                             color="primary"
                             sx={{
