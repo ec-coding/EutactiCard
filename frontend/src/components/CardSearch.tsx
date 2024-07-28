@@ -9,6 +9,15 @@ import SearchElement from './SearchElement';
 import AdvSearch from './AdvancedSearch/AdvancedSearch';
 
 const CardSearch = () => {
+
+    const submitClick = () => {
+        fetch("https://api.pokemontcg.io/v2/cards/?q=set.id:base1")
+        .then(res => res.json()) //parse response as json
+        .then(data => {
+          console.log(data)
+      })
+    }
+
     const filterHeader = {
         fontSize: '1.35rem',
         textShadow: '1.5px 1.5px 0 black',
@@ -49,7 +58,7 @@ const CardSearch = () => {
             </Grid>
             <Grid container>
                 <Grid item container lg={6}>
-                    <Grid container lg={12} mx="auto" alignItems="flex-end" justifyContent="space-between">
+                    <Grid item container lg={12} mx="auto" alignItems="flex-end" justifyContent="space-between">
                         <Grid item container gap={4}>
                             <Grid item lg={5.5}>
                                 <Typography variant="h5" marginY="0.5vh" color="white" textAlign="left"
@@ -190,7 +199,7 @@ const CardSearch = () => {
                             />
                         </Grid>
                     </Grid>
-                    <Grid container lg={12} gap={2} marginTop={12} justifyContent="center">
+                    <Grid item container lg={12} gap={2} marginTop={12} justifyContent="center">
                         <Button
                             href="/"
                             variant="contained"
@@ -222,6 +231,8 @@ const CardSearch = () => {
                                 bgcolor: '#f3ce49',
                                 boxShadow: '2px 4px 6px black',
                             }}
+                            type="submit"
+                            onClick={submitClick}
                         >
                             Submit
                         </Button>

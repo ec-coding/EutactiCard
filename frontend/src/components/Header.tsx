@@ -72,7 +72,7 @@ const Header = () => {
             <Grid container
               sx={{
               }}>
-              <Grid lg={2} paddingTop={1} container>
+              <Grid item lg={2} marginTop={1} container>
                 <Link to="/">
                   <img
                     src="https://i.imgur.com/HgSy1Gq.png"
@@ -83,7 +83,7 @@ const Header = () => {
               </Grid>
               <MobileMenu />
               {!isMobile && ( // Render the following elements if viewport is not below 'sm' breakpoint
-                <Grid lg={10} sx={{ display: 'flex', alignItems: 'center' }} justifyContent="space-between">
+                <Grid item lg={10} sx={{ display: 'flex', alignItems: 'center' }} justifyContent="space-between">
                   <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                     <Link to="/">
                       <Button sx={isActiveLink('/') ? activeLinkStyle : linkStyle}>
