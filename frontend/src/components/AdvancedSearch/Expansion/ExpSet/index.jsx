@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import { Card, Grid, Typography, styled } from "@mui/material"
 import Checkbox from '@mui/material/Checkbox';
 
-const ExpSet = ({ name, icon, logo, uncheckedBg, checkedBg }: { name: string, icon: string, logo: string, uncheckedBg: string, checkedBg: string }) => {
+const ExpSet = ({ name, icon, logo, uncheckedBg, checkedBg }) => {
     const [checked, setChecked] = useState(false);
     const [background, setBackground] = useState(uncheckedBg);
 
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const handleChange = (event) => {
         setChecked(event.target.checked);
         updateElementBg(event.target.checked);
     };
 
-    const updateElementBg = (isChecked: boolean) => {
+    const updateElementBg = (isChecked) => {
 
         if (isChecked === false) {
 

@@ -1,0 +1,42 @@
+.energy-type {
+
+    .energy-type-entry {
+        background: darkGrey;
+        border: 2px solid lightGrey;
+        border-radius: 5px;
+
+        .energy-type-bg {
+            box-shadow: 1.5px 1.5px 0.5em black,
+                inset 1.5px 1.5px 0 rgba(255, 255, 255, .75),
+                inset -1.5px -1.5px 0 rgba(0, 0, 0, 0.75);
+            margin: 1px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-radius: 5px;
+
+            .energy-type-container {
+                align-items: center; /* Align items vertically (cross-axis) */
+                justify-content: space-between; /* Distribute items horizontally (main-axis) */
+
+                .icon-container {
+                    margin-left: 8px;
+                    margin-right: 12px;
+                    border-radius: 50%;
+                }
+
+                .label-container {
+                    color: white;
+                    font-size: 14px;
+                    text-align: right;
+                    text-shadow: 1.5px 1.5px 2px black;
+                }
+
+                input {
+                    margin-right: 1em;
+                    
+                }
+            }
+        }
+    }
+
+}

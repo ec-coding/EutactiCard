@@ -6,16 +6,16 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-function valuetext(value: number) {
+function valuetext(value) {
     return `${value}`;
 }
 
 
 const index = () => {
-    const [value, setValue] = React.useState<number[]>([0, 340]);
+    const [value, setValue] = React.useState([0, 340]);
 
-    const handleChange = (event: Event, newValue: number | number[]) => {
-        setValue(newValue as number[]);
+    const handleChange = (event, newValue) => {
+        setValue(newValue);
     };
 
     return (

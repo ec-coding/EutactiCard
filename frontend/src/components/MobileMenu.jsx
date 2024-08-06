@@ -11,9 +11,9 @@ function MobileMenu() {
     const [anchorEl, setAnchorEl] = React.useState(null);
 
     // Open menu function
-    const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const handleClick = (event) => {
         // Suppress TypeScript error with type assertion
-        setAnchorEl(event.currentTarget as any);
+        setAnchorEl(event.currentTarget);
     };
 
     // Close menu function
@@ -56,7 +56,7 @@ function MobileMenu() {
         minWidth: 0,
     };
 
-    const isActiveLink = (path: string) => location.pathname === path;
+    const isActiveLink = (path) => location.pathname === path;
 
     return (
         <>

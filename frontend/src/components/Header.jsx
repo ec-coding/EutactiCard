@@ -16,7 +16,7 @@ const Header = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
   const location = useLocation();
-  const isActiveLink = (path: string) => location.pathname === path;
+  const isActiveLink = (path) => location.pathname === path;
 
   const activeLinkStyle = {
     textTransform: 'none',

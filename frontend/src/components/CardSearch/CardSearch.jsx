@@ -1,21 +1,40 @@
 import {
+    Box,
     Button,
+    Card,
     Container,
+    FormControlLabel,
     Grid,
+    Radio,
     Typography,
     TextField,
 } from '@mui/material';
-import SearchElement from './SearchElement';
-import AdvSearch from './AdvancedSearch/AdvancedSearch';
+import SearchElement from '../SearchElement';
+import AdvSearch from '../AdvancedSearch/AdvancedSearch';
+import { useContext, useState } from 'react';
+import CardContext from '../../contexts/CardContext';
+import './CardSearch.scss'
 
-const CardSearch = () => {
+const CardSearch = ({ }) => {
+    const [cards, setCards] = useState([]);
+    const [cardElement, changeCardElement] = useState('')
+    const [selectedElement, setSelectedElement] = useState(null);
+    // const itemsPerPage = 4
+    const handleElementChange = (element) => {
+        setSelectedElement(element);
+    };
 
     const submitClick = () => {
         fetch("https://api.pokemontcg.io/v2/cards/?q=set.id:base1")
-        .then(res => res.json()) //parse response as json
-        .then(data => {
-          console.log(data)
-      })
+            .then(res => res.json()) //parse response as json
+            .then(response => {
+                const imageUrl = response.data.map((card) => card.images.small); // Explicitly set the type for imageUrls
+                const limitedCards = imageUrls.slice(0, 5);
+                setCards(limitedCards);
+            })
+            .catch(error => {
+                console.error("Error fetching data:", error);
+            });
     }
 
     const filterHeader = {
@@ -104,6 +123,76 @@ const CardSearch = () => {
                                 Energy Type
                             </Typography>
                         </Grid>
+                        <Grid container gap={1} className="energy-type">
+                            <Grid lg={3.75} className="energy-type-entry">
+                                <Card className="energy-type-bg"
+                                    sx={{
+                                        backgroundImage: 'linear-gradient(264deg, #F4D03F 0%, #77CC55 15%, #055a3b 100%)'
+                                    }}
+                                >
+                                    <Grid container className="energy-type-container">
+                                        <Grid item className="icon-container">
+                                            <div className={`icon-Grass m-0`}></div>
+                                        </Grid>
+                                        <Grid item sx={{ marginRight: 'auto' }} className="label-container">
+                                            <Typography variant="body1">Grass</Typography>
+                                        </Grid>
+                                        <input class="type-input element-input" type="radio" id="type-grass" name="energy-type" checked={cardElement.includes('grass')} onChange={() => changeCardElement('grass')} />
+                                    </Grid>
+                                </Card>
+                            </Grid>
+                            <Grid lg={3.75} className="energy-type-entry">
+                                <Card className="energy-type-bg"
+                                    sx={{
+                                        backgroundImage: 'linear-gradient(270deg, rgb(255, 247, 93) 0%, rgb(254, 101, 13) 55%, rgb(243, 60, 4) 70%, rgb(218, 31, 5) 85%, rgb(161, 1, 0) 100%)'
+                                    }}
+                                >
+                                    <Grid container className="energy-type-container">
+                                        <Grid item className="icon-container">
+                                            <div className={`icon-Fire m-0`}></div>
+                                        </Grid>
+                                        <Grid item sx={{ marginRight: 'auto' }} className="label-container">
+                                            <Typography variant="body1">Fire</Typography>
+                                        </Grid>
+                                        <input class="type-input element-input" type="radio" id="type-fire" name="energy-type" checked={cardElement.includes('fire')} onChange={() => changeCardElement('fire')} />
+                                    </Grid>
+                                </Card>
+                            </Grid>
+                            <Grid lg={3.75} className="energy-type-entry">
+                                <Card className="energy-type-bg"
+                                    sx={{
+                                        backgroundImage: 'linear-gradient(250deg, #1366c5 0%, #2BC0E4 61%, #2a238d 100%)'
+                                    }}
+                                >
+                                    <Grid container className="energy-type-container">
+                                        <Grid item className="icon-container">
+                                            <div className={`icon-Water m-0`}></div>
+                                        </Grid>
+                                        <Grid item sx={{ marginRight: 'auto' }} className="label-container">
+                                            <Typography variant="body1">Water</Typography>
+                                        </Grid>
+                                        <input class="type-input element-input" type="radio" id="type-water" name="energy-type" checked={cardElement.includes('water')} onChange={() => changeCardElement('water')} />
+                                    </Grid>
+                                </Card>
+                            </Grid>
+                            <Grid lg={3.75} className="energy-type-entry">
+                                <Card className="energy-type-bg"
+                                    sx={{ 
+                                        backgroundImage: 'linear-gradient(250deg, #1366c5 0%, #2BC0E4 61%, #2a238d 100%)' 
+                                    }}
+                                >
+                                    <Grid container className="energy-type-container">
+                                        <Grid item className="icon-container">
+                                            <div className={`icon-Lightning m-0`}></div>
+                                        </Grid>
+                                        <Grid item sx={{ marginRight: 'auto' }} className="label-container">
+                                            <Typography variant="body1">Lightning</Typography>
+                                        </Grid>
+                                        <input class="type-input element-input" type="radio" id="type-lightning" name="energy-type" checked={cardElement.includes('lightning')} onChange={() => changeCardElement('lightning')} />
+                                    </Grid>
+                                </Card>
+                            </Grid>
+                        </Grid>
                         <Grid container gap={1}>
                             <SearchElement
                                 customProp="Grass"
@@ -113,48 +202,38 @@ const CardSearch = () => {
                                 customProp="Fire"
                                 background='linear-gradient(270deg, rgb(255, 247, 93) 0%, rgb(254, 101, 13) 55%, rgb(243, 60, 4) 70%, rgb(218, 31, 5) 85%, rgb(161, 1, 0) 100%)'
                             />
-
                             <SearchElement
                                 customProp="Water"
                                 background='linear-gradient(250deg, #1366c5 0%, #2BC0E4 61%, #2a238d 100%)'
                             />
-
                             <SearchElement
                                 customProp="Lightning"
                                 background='linear-gradient(65deg, #db9a22 0%, #d5e25a 40%, #FAB536 100%)'
                             />
-
                             <SearchElement
                                 customProp="Fighting"
                                 background='linear-gradient(to left, rgb(182, 156, 103), rgb(153, 102, 0) 55%, rgb(112, 26, 0) 100%)'
-
                             />
-
                             <SearchElement
                                 customProp="Psychic"
                                 background='linear-gradient(to left, rgb(230, 140, 204) 0%, #a18cd1 25%, #1f1044 100%)'
                             />
-
                             <SearchElement
                                 customProp="Colorless"
                                 background='linear-gradient(to right, #AAAA99, #e4e4e4)'
                             />
-
                             <SearchElement
                                 customProp="Darkness"
                                 background='linear-gradient(to left, #3b3941 0%, #141414 100%)'
                             />
-
                             <SearchElement
                                 customProp="Metal"
                                 background='linear-gradient(65deg, #a6b6d4, #61534d, #e2d3d3, #61534d, #a6b6d4)'
                             />
-
                             <SearchElement
                                 customProp="Fairy"
                                 background='linear-gradient(to right, #e66465, #9198e5)'
                             />
-
                             <SearchElement
                                 customProp="Dragon"
                                 background='linear-gradient(to right, #BF953F 5%, #FCF6BA 15%, #B38728 35%, #FBF5B7 75%, #AA771C 100%)'
@@ -250,6 +329,13 @@ const CardSearch = () => {
                     <AdvSearch />
                 </Grid>
             </Grid> */}
+
+            <Grid>
+                {/* Display the fetched card images */}
+                {cards.map((imageUrl, index) => (
+                    <img key={index} src={imageUrl} alt={`Card ${index}`} />
+                ))}
+            </Grid>
 
         </Grid>
     )

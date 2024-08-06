@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
-import { Card, Grid, Typography } from "@mui/material"
+import { Card, FormControlLabel, Grid, Typography } from "@mui/material"
 import Checkbox from '@mui/material/Checkbox';
 import Switch from '@mui/material/Switch';
 
-const SearchElement = ({ customProp, background }: { customProp: string, background: string }) => {
+const SearchElement = ({ customProp, background, selected, onChange }) => {
     const [checked, setChecked] = useState(false);
+    const [element, setElement] = useState('')
 
     const handleChange = () => {
         setChecked((prev) => !prev);
@@ -16,12 +17,12 @@ const SearchElement = ({ customProp, background }: { customProp: string, backgro
 
     return (
         <Grid item lg={3.75}
-        onClick={handleChange}
-        sx={{
-            background: 'darkGrey',
-            border: checked ? '2px solid orange' : '2px solid lightGrey',
-            borderRadius: '5px',
-        }}
+            onClick={handleChange}
+            sx={{
+                background: 'darkGrey',
+                border: checked ? '2px solid orange' : '2px solid lightGrey',
+                borderRadius: '5px',
+            }}
         >
             <Card
                 sx={{
