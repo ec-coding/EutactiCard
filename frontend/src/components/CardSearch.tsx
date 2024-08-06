@@ -10,12 +10,16 @@ import AdvSearch from './AdvancedSearch/AdvancedSearch';
 
 const CardSearch = () => {
 
-    const submitClick = () => {
-        fetch("https://api.pokemontcg.io/v2/cards/?q=set.id:base1")
-        .then(res => res.json()) //parse response as json
-        .then(data => {
-          console.log(data)
-      })
+    function submitClick() {
+        fetch("https://api.pokemontcg.io/v2/cards/?q=set.id:base1", {
+            headers: {
+                "X-Api-Key": "9aac7fc4-dfb9-41eb-ab2f-f30e2976bd08"
+            },
+        })
+            .then(res => res.json()) //parse response as json
+            .then(response => {
+                console.log(response)
+            })
     }
 
     const filterHeader = {
@@ -201,7 +205,6 @@ const CardSearch = () => {
                     </Grid>
                     <Grid item container lg={12} gap={2} marginTop={12} justifyContent="center">
                         <Button
-                            href="/"
                             variant="contained"
                             color="primary"
                             sx={{
@@ -218,7 +221,6 @@ const CardSearch = () => {
                             Reset
                         </Button>
                         <Button
-                            href="/AboutUs"
                             variant="contained"
                             color="primary"
                             sx={{
