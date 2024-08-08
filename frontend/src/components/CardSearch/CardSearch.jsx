@@ -2,6 +2,7 @@ import {
     Box,
     Button,
     Card,
+    Checkbox,
     Container,
     FormControlLabel,
     Grid,
@@ -115,6 +116,8 @@ const CardSearch = ({ }) => {
                             </Grid>
                         </Grid>
                     </Grid>
+
+                    {/* SEARCH PARAMS - ENERGY TYPE */}
                     <Grid container marginTop={4} gap={0.5}>
                         <Grid item>
                             <Typography variant="h5" marginBottom="0.5vh" color="white"
@@ -124,7 +127,7 @@ const CardSearch = ({ }) => {
                             </Typography>
                         </Grid>
                         <Grid container gap={1} className="energy-type">
-                            <Grid lg={3.75} className="energy-type-entry">
+                            <Grid item lg={3.75} className="energy-type-entry">
                                 <Card className="energy-type-bg"
                                     sx={{
                                         backgroundImage: 'linear-gradient(264deg, #F4D03F 0%, #77CC55 15%, #055a3b 100%)'
@@ -135,13 +138,19 @@ const CardSearch = ({ }) => {
                                             <div className={`icon-Grass m-0`}></div>
                                         </Grid>
                                         <Grid item sx={{ marginRight: 'auto' }} className="label-container">
-                                            <Typography variant="body1">Grass</Typography>
+                                            <Typography variant="body1">GRASS</Typography>
                                         </Grid>
-                                        <input class="type-input element-input" type="radio" id="type-grass" name="energy-type" checked={cardElement.includes('grass')} onChange={() => changeCardElement('grass')} />
+                                        <Checkbox
+                                            color="default"
+                                            sx={{
+                                                height: '20px',
+                                            }}
+                                        />
+                                        {/* <input className="type-input element-input" type="checkbox" id="type-grass" name="energy-type" checked={cardElement.includes('grass')} onChange={() => changeCardElement('grass')} /> */}
                                     </Grid>
                                 </Card>
                             </Grid>
-                            <Grid lg={3.75} className="energy-type-entry">
+                            <Grid item lg={3.75} className="energy-type-entry">
                                 <Card className="energy-type-bg"
                                     sx={{
                                         backgroundImage: 'linear-gradient(270deg, rgb(255, 247, 93) 0%, rgb(254, 101, 13) 55%, rgb(243, 60, 4) 70%, rgb(218, 31, 5) 85%, rgb(161, 1, 0) 100%)'
@@ -152,13 +161,19 @@ const CardSearch = ({ }) => {
                                             <div className={`icon-Fire m-0`}></div>
                                         </Grid>
                                         <Grid item sx={{ marginRight: 'auto' }} className="label-container">
-                                            <Typography variant="body1">Fire</Typography>
+                                            <Typography variant="body1">FIRE</Typography>
                                         </Grid>
-                                        <input class="type-input element-input" type="radio" id="type-fire" name="energy-type" checked={cardElement.includes('fire')} onChange={() => changeCardElement('fire')} />
+                                        <Checkbox
+                                            color="default"
+                                            sx={{
+                                                height: '20px',
+                                            }}
+                                        />
+                                        {/* <input className="type-input element-input" type="checkbox" id="type-fire" name="energy-type" checked={cardElement.includes('fire')} onChange={() => changeCardElement('fire')} /> */}
                                     </Grid>
                                 </Card>
                             </Grid>
-                            <Grid lg={3.75} className="energy-type-entry">
+                            <Grid item lg={3.75} className="energy-type-entry">
                                 <Card className="energy-type-bg"
                                     sx={{
                                         backgroundImage: 'linear-gradient(250deg, #1366c5 0%, #2BC0E4 61%, #2a238d 100%)'
@@ -169,16 +184,22 @@ const CardSearch = ({ }) => {
                                             <div className={`icon-Water m-0`}></div>
                                         </Grid>
                                         <Grid item sx={{ marginRight: 'auto' }} className="label-container">
-                                            <Typography variant="body1">Water</Typography>
+                                            <Typography variant="body1">WATER</Typography>
                                         </Grid>
-                                        <input class="type-input element-input" type="radio" id="type-water" name="energy-type" checked={cardElement.includes('water')} onChange={() => changeCardElement('water')} />
+                                        <Checkbox
+                                            color="default"
+                                            sx={{
+                                                height: '20px',
+                                            }}
+                                        />
+                                        {/* <input className="type-input element-input" type="checkbox" id="type-water" name="energy-type" checked={cardElement.includes('water')} onChange={() => changeCardElement('water')} /> */}
                                     </Grid>
                                 </Card>
                             </Grid>
-                            <Grid lg={3.75} className="energy-type-entry">
+                            <Grid item lg={3.75} className="energy-type-entry">
                                 <Card className="energy-type-bg"
-                                    sx={{ 
-                                        backgroundImage: 'linear-gradient(250deg, #1366c5 0%, #2BC0E4 61%, #2a238d 100%)' 
+                                    sx={{
+                                        backgroundImage: 'linear-gradient(65deg, #db9a22 0%, #d5e25a 40%, #FAB536 100%)'
                                     }}
                                 >
                                     <Grid container className="energy-type-container">
@@ -186,58 +207,179 @@ const CardSearch = ({ }) => {
                                             <div className={`icon-Lightning m-0`}></div>
                                         </Grid>
                                         <Grid item sx={{ marginRight: 'auto' }} className="label-container">
-                                            <Typography variant="body1">Lightning</Typography>
+                                            <Typography variant="body1">LIGHTNING</Typography>
                                         </Grid>
-                                        <input class="type-input element-input" type="radio" id="type-lightning" name="energy-type" checked={cardElement.includes('lightning')} onChange={() => changeCardElement('lightning')} />
+                                        <Checkbox
+                                            color="default"
+                                            sx={{
+                                                height: '20px',
+                                            }}
+                                        />
+                                        {/* <input className="type-input element-input" type="checkbox" id="type-lightning" name="energy-type" checked={cardElement.includes('lightning')} onChange={() => changeCardElement('lightning')} /> */}
                                     </Grid>
                                 </Card>
                             </Grid>
-                        </Grid>
-                        <Grid container gap={1}>
-                            <SearchElement
-                                customProp="Grass"
-                                background='linear-gradient(264deg, #F4D03F 0%, #77CC55 15%, #055a3b 100%)'
-                            />
-                            <SearchElement
-                                customProp="Fire"
-                                background='linear-gradient(270deg, rgb(255, 247, 93) 0%, rgb(254, 101, 13) 55%, rgb(243, 60, 4) 70%, rgb(218, 31, 5) 85%, rgb(161, 1, 0) 100%)'
-                            />
-                            <SearchElement
-                                customProp="Water"
-                                background='linear-gradient(250deg, #1366c5 0%, #2BC0E4 61%, #2a238d 100%)'
-                            />
-                            <SearchElement
-                                customProp="Lightning"
-                                background='linear-gradient(65deg, #db9a22 0%, #d5e25a 40%, #FAB536 100%)'
-                            />
-                            <SearchElement
-                                customProp="Fighting"
-                                background='linear-gradient(to left, rgb(182, 156, 103), rgb(153, 102, 0) 55%, rgb(112, 26, 0) 100%)'
-                            />
-                            <SearchElement
-                                customProp="Psychic"
-                                background='linear-gradient(to left, rgb(230, 140, 204) 0%, #a18cd1 25%, #1f1044 100%)'
-                            />
-                            <SearchElement
-                                customProp="Colorless"
-                                background='linear-gradient(to right, #AAAA99, #e4e4e4)'
-                            />
-                            <SearchElement
-                                customProp="Darkness"
-                                background='linear-gradient(to left, #3b3941 0%, #141414 100%)'
-                            />
-                            <SearchElement
-                                customProp="Metal"
-                                background='linear-gradient(65deg, #a6b6d4, #61534d, #e2d3d3, #61534d, #a6b6d4)'
-                            />
-                            <SearchElement
-                                customProp="Fairy"
-                                background='linear-gradient(to right, #e66465, #9198e5)'
-                            />
-                            <SearchElement
-                                customProp="Dragon"
-                                background='linear-gradient(to right, #BF953F 5%, #FCF6BA 15%, #B38728 35%, #FBF5B7 75%, #AA771C 100%)'
-                            />
+                            <Grid item lg={3.75} className="energy-type-entry">
+                                <Card className="energy-type-bg"
+                                    sx={{
+                                        backgroundImage: 'linear-gradient(to left, rgb(182, 156, 103), rgb(153, 102, 0) 55%, rgb(112, 26, 0) 100%)'
+                                    }}
+                                >
+                                    <Grid container className="energy-type-container">
+                                        <Grid item className="icon-container">
+                                            <div className={`icon-Fighting m-0`}></div>
+                                        </Grid>
+                                        <Grid item sx={{ marginRight: 'auto' }} className="label-container">
+                                            <Typography variant="body1">FIGHTING</Typography>
+                                        </Grid>
+                                        <Checkbox
+                                            color="default"
+                                            sx={{
+                                                height: '20px',
+                                            }}
+                                        />
+                                        {/* <input className="type-input element-input" type="checkbox" id="type-fighting" name="energy-type" checked={cardElement.includes('fighting')} onChange={() => changeCardElement('fighting')} /> */}
+                                    </Grid>
+                                </Card>
+                            </Grid>
+                            <Grid item lg={3.75} className="energy-type-entry">
+                                <Card className="energy-type-bg"
+                                    sx={{
+                                        backgroundImage: 'linear-gradient(to left, rgb(230, 140, 204) 0%, #a18cd1 25%, #1f1044 100%)'
+                                    }}
+                                >
+                                    <Grid container className="energy-type-container">
+                                        <Grid item className="icon-container">
+                                            <div className={`icon-Psychic m-0`}></div>
+                                        </Grid>
+                                        <Grid item sx={{ marginRight: 'auto' }} className="label-container">
+                                            <Typography variant="body1">PSYCHIC</Typography>
+                                        </Grid>
+                                        <Checkbox
+                                            color="default"
+                                            sx={{
+                                                height: '20px',
+                                            }}
+                                        />
+                                        {/* <input className="type-input element-input" type="checkbox" id="type-psychic" name="energy-type" checked={cardElement.includes('psychic')} onChange={() => changeCardElement('psychic')} /> */}
+                                    </Grid>
+                                </Card>
+                            </Grid>
+                            <Grid item lg={3.75} className="energy-type-entry">
+                                <Card className="energy-type-bg"
+                                    sx={{
+                                        backgroundImage: 'linear-gradient(to right, #AAAA99, #e4e4e4)'
+                                    }}
+                                >
+                                    <Grid container className="energy-type-container">
+                                        <Grid item className="icon-container">
+                                            <div className={`icon-Colorless m-0`}></div>
+                                        </Grid>
+                                        <Grid item sx={{ marginRight: 'auto' }} className="label-container">
+                                            <Typography variant="body1">COLORLESS</Typography>
+                                        </Grid>
+                                        <Checkbox
+                                            color="default"
+                                            sx={{
+                                                height: '20px',
+                                            }}
+                                        />
+                                        {/* <input className="type-input element-input" type="checkbox" id="type-colorless" name="energy-type" checked={cardElement.includes('colorless')} onChange={() => changeCardElement('colorless')} /> */}
+                                    </Grid>
+                                </Card>
+                            </Grid>
+                            <Grid item lg={3.75} className="energy-type-entry">
+                                <Card className="energy-type-bg"
+                                    sx={{
+                                        backgroundImage: 'linear-gradient(to left, #3b3941 0%, #141414 100%)'
+                                    }}
+                                >
+                                    <Grid container className="energy-type-container">
+                                        <Grid item className="icon-container">
+                                            <div className={`icon-Darkness m-0`}></div>
+                                        </Grid>
+                                        <Grid item sx={{ marginRight: 'auto' }} className="label-container">
+                                            <Typography variant="body1">DARKNESS</Typography>
+                                        </Grid>
+                                        <Checkbox
+                                            color="default"
+                                            sx={{
+                                                height: '20px',
+                                            }}
+                                        />
+                                        {/* <input className="type-input element-input" type="checkbox" id="type-darkness" name="energy-type" checked={cardElement.includes('darkness')} onChange={() => changeCardElement('darkness')} /> */}
+                                    </Grid>
+                                </Card>
+                            </Grid>
+                            <Grid item lg={3.75} className="energy-type-entry">
+                                <Card className="energy-type-bg"
+                                    sx={{
+                                        backgroundImage: 'linear-gradient(65deg, #a6b6d4, #61534d, #e2d3d3, #61534d, #a6b6d4)'
+                                    }}
+                                >
+                                    <Grid container className="energy-type-container">
+                                        <Grid item className="icon-container">
+                                            <div className={`icon-Metal m-0`}></div>
+                                        </Grid>
+                                        <Grid item sx={{ marginRight: 'auto' }} className="label-container">
+                                            <Typography variant="body1">METAL</Typography>
+                                        </Grid>
+                                        <Checkbox
+                                            color="default"
+                                            sx={{
+                                                height: '20px',
+                                            }}
+                                        />
+                                        {/* <input className="type-input element-input" type="checkbox" id="type-metal" name="energy-type" checked={cardElement.includes('metal')} onChange={() => changeCardElement('metal')} /> */}
+                                    </Grid>
+                                </Card>
+                            </Grid>
+                            <Grid item lg={3.75} className="energy-type-entry">
+                                <Card className="energy-type-bg"
+                                    sx={{
+                                        backgroundImage: 'linear-gradient(to right, #e66465, #9198e5)'
+                                    }}
+                                >
+                                    <Grid container className="energy-type-container">
+                                        <Grid item className="icon-container">
+                                            <div className={`icon-Fairy m-0`}></div>
+                                        </Grid>
+                                        <Grid item sx={{ marginRight: 'auto' }} className="label-container">
+                                            <Typography variant="body1">FAIRY</Typography>
+                                        </Grid>
+                                        <Checkbox
+                                            color="default"
+                                            sx={{
+                                                height: '20px',
+                                            }}
+                                        />
+                                        {/* <input className="type-input element-input" type="checkbox" id="type-fairy" name="energy-type" checked={cardElement.includes('fairy')} onChange={() => changeCardElement('fairy')} /> */}
+                                    </Grid>
+                                </Card>
+                            </Grid>
+                            <Grid item lg={3.75} className="energy-type-entry">
+                                <Card className="energy-type-bg"
+                                    sx={{
+                                        backgroundImage: 'linear-gradient(to right, #BF953F 5%, #FCF6BA 15%, #B38728 35%, #FBF5B7 75%, #AA771C 100%)'
+                                    }}
+                                >
+                                    <Grid container className="energy-type-container">
+                                        <Grid item className="icon-container">
+                                            <div className={`icon-Dragon m-0`}></div>
+                                        </Grid>
+                                        <Grid item sx={{ marginRight: 'auto' }} className="label-container">
+                                            <Typography variant="body1">DRAGON</Typography>
+                                        </Grid>
+                                        <Checkbox
+                                            color="default"
+                                            sx={{
+                                                height: '20px',
+                                            }}
+                                        />
+                                        {/* <input className="type-input element-input" type="checkbox" id="type-dragon" name="energy-type" checked={cardElement.includes('dragon')} onChange={() => changeCardElement('dragon')} /> */}
+                                    </Grid>
+                                </Card>
+                            </Grid>
                         </Grid>
                     </Grid>
 
@@ -317,18 +459,18 @@ const CardSearch = ({ }) => {
                 </Grid>
             </Grid>
 
-            {/* <Grid item lg={12} mx="auto">
+            <Grid item lg={12} mx="auto">
                 <Grid item>
                     <Typography variant="h5" marginY="1vh" color="white"
-                            sx={filterHeader}
-                        >
-                            Advanced Search
-                        </Typography>
+                        sx={filterHeader}
+                    >
+                        Advanced Search
+                    </Typography>
                 </Grid>
                 <Grid sm={12}>
                     <AdvSearch />
                 </Grid>
-            </Grid> */}
+            </Grid>
 
             <Grid>
                 {/* Display the fetched card images */}

@@ -29,11 +29,14 @@
                     font-size: 14px;
                     text-align: right;
                     text-shadow: 1.5px 1.5px 2px black;
+
+                    .MuiTypography-root {
+                        font-size: 14px
+                    }
                 }
 
                 input {
-                    margin-right: 1em;
-                    
+                    margin: 0 1em 0 0;
                 }
             }
         }
