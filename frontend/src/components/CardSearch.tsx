@@ -242,7 +242,7 @@ const CardSearch = () => {
                 </Grid>
             </Grid>
 
-            {/* <Grid item lg={12} mx="auto">
+            <Grid item lg={12} mx="auto">
                 <Grid item>
                     <Typography variant="h5" marginY="1vh" color="white"
                             sx={filterHeader}
@@ -253,7 +253,7 @@ const CardSearch = () => {
                 <Grid sm={12}>
                     <AdvSearch />
                 </Grid>
-            </Grid> */}
+            </Grid>
 
         </Grid>
     )
