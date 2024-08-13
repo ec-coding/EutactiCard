@@ -25,6 +25,7 @@ const index = ({ name, icon }) => {
     return (
         <Grid
             container
+            item
             alignItems="center"
             justifyContent="center"
             lg={3}

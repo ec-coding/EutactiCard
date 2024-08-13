@@ -40,6 +40,7 @@ const ExpSet = ({ name, icon, logo, uncheckedBg, checkedBg }) => {
 
     return (
         <Grid
+            item
             lg={3.75}
             sx={{
                 marginTop: '-1px',

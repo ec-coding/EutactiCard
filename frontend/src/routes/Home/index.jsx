@@ -1,3 +1,4 @@
+import React, { useContext, useState } from 'react';
 import {
     Container,
     Box,
@@ -12,13 +13,15 @@ import {
 } from '@mui/material';
 import CardSearch from '../../components/CardSearch/CardSearch';
 import LatestDecks from '../../components/LatestDecks';
+import ElementContext from '../../contexts/ElementContext';
 
 const Home = () => {
+    const changeElements = useState([])
 
     return (
         <>
+            <ElementContext.Provider value={changeElements}>
                 <Container maxWidth={false} disableGutters>
-
                     <Grid
                         alignContent={'center'}
                         alignItems={'center'}
@@ -39,6 +42,7 @@ const Home = () => {
                         </Grid>
                     </Grid>
                 </Container>
+                </ElementContext.Provider>
         </>
     )
 }

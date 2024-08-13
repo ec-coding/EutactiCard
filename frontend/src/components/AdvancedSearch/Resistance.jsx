@@ -23,57 +23,57 @@ const CardType = () => {
             >
                 <Grid container columnSpacing={1.5} rowSpacing={1} paddingX="7.5px">
                     <SearchElement
-                        customProp="Grass"
+                        elementName="Grass"
                         uncheckedBg=''
                         checkedBg='' />
                     <SearchElement
-                        customProp="Fire"
-                        uncheckedBg=''
-                        checkedBg='' />
-
-                    <SearchElement
-                        customProp="Water"
+                        elementName="Fire"
                         uncheckedBg=''
                         checkedBg='' />
 
                     <SearchElement
-                        customProp="Lightning"
+                        elementName="Water"
                         uncheckedBg=''
                         checkedBg='' />
 
                     <SearchElement
-                        customProp="Fighting"
+                        elementName="Lightning"
+                        uncheckedBg=''
+                        checkedBg='' />
+
+                    <SearchElement
+                        elementName="Fighting"
                         uncheckedBg=''
                         checkedBg=''
                     />
 
                     <SearchElement
-                        customProp="Psychic"
+                        elementName="Psychic"
                         uncheckedBg=''
                         checkedBg='' />
 
                     <SearchElement
-                        customProp="Colorless"
+                        elementName="Colorless"
                         uncheckedBg=''
                         checkedBg='' />
 
                     <SearchElement
-                        customProp="Darkness"
+                        elementName="Darkness"
                         uncheckedBg=''
                         checkedBg='' />
 
                     <SearchElement
-                        customProp="Metal"
+                        elementName="Metal"
                         uncheckedBg=''
                         checkedBg='' />
 
                     <SearchElement
-                        customProp="Fairy"
+                        elementName="Fairy"
                         uncheckedBg=''
                         checkedBg='' />
 
                     <SearchElement
-                        customProp="Dragon"
+                        elementName="Dragon"
                         uncheckedBg=''
                         checkedBg='' />
                 </Grid>
