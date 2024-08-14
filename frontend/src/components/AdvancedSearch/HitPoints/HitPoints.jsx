@@ -30,11 +30,7 @@ const index = () => {
                         HP
                     </AccordionItemButton>
                 </AccordionItemHeading>
-                <AccordionItemPanel
-                    sx={{
-                        marginBottom: "1rem",
-                    }}
-                >
+                <AccordionItemPanel sx={{ marginBottom: "1rem" }}>
                     <Accordion allowMultipleExpanded allowZeroExpanded>
                         <AccordionItemPanel>
                             <Grid container justifyContent="center" alignContent="flex-start">

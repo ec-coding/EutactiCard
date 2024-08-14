@@ -23,13 +23,8 @@ const Expansion = () => {
                         Expansion
                     </AccordionItemButton>
                 </AccordionItemHeading>
-                <AccordionItemPanel
-                    sx={{
-                        marginBottom: "1rem",
-                    }}
-                >
+                <AccordionItemPanel sx={{ marginBottom: "1rem" }}>
                     <Accordion className="accordion-adv-inner" allowMultipleExpanded allowZeroExpanded>
-
                         <AccordionItem>
                             <AccordionItemHeading>
                                 <AccordionItemButton>Scarlet & Violet</AccordionItemButton>

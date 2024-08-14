@@ -22,11 +22,7 @@ const Resistance = () => {
                         Resistance
                     </AccordionItemButton>
                 </AccordionItemHeading>
-                <AccordionItemPanel
-                    sx={{
-                        marginBottom: "1rem",
-                    }}
-                >
+                <AccordionItemPanel sx={{ marginBottom: "1rem" }}>
                     <Accordion allowMultipleExpanded allowZeroExpanded>
                         <AccordionItemPanel>
                             <Grid container gap={1} className="energy-type" paddingX={35}>

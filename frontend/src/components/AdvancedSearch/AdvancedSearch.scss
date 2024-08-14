@@ -1,15 +1,36 @@
-.accordion-adv {
+.accordion-adv-search {
+    background-color: rgb(255, 255, 255);
 
-        .accordion__button {
-            background-color: rgb(24, 24, 24);
-            color: white
+    .accordion-adv-button {
+
+        .accordion__button::before {
+            width: 13.5px;
+            height: 13.5px;
+            margin-right: 1em;
         }
 
-        .accordion__panel {
-            background-color: rgb(212, 212, 212);
+    }
+
+    .accordion__panel {
+        padding: 0px;
+
+        .accordion-adv {
+
+            .accordion__button {
+                background-color: rgb(24, 24, 24);
+                color: white
+            }
 
             .accordion__panel {
-                background-color: rgb(255, 255, 255);
+                background-color: rgb(212, 212, 212);
+                padding: 10px;
+
+                .accordion__panel {
+                    background-color: rgb(255, 255, 255);
+                }
             }
         }
+
+    }
+
 }

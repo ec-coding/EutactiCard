@@ -21,11 +21,7 @@ const CardType = () => {
                         Card Type
                     </AccordionItemButton>
                 </AccordionItemHeading>
-                <AccordionItemPanel
-                    sx={{
-                        marginBottom: "1rem",
-                    }}
-                >
+                <AccordionItemPanel sx={{ marginBottom: "1rem" }}>
                     <Accordion allowMultipleExpanded allowZeroExpanded>
                         <AccordionItem>
                             <AccordionItemHeading>

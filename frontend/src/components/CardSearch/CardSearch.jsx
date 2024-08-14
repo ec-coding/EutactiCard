@@ -227,14 +227,7 @@ const CardSearch = ({ }) => {
                 </Grid>
             </Grid>
 
-            <Grid item lg={12} mx="auto">
-                <Grid item>
-                    <Typography variant="h5" marginY="1vh" color="white"
-                        sx={filterHeader}
-                    >
-                        Advanced Search
-                    </Typography>
-                </Grid>
+            <Grid item lg={12} my={5} mx="auto">
                 <Grid item sm={12}>
                     <AdvSearch />
                 </Grid>

@@ -39,9 +39,7 @@ const ExpSet = ({ name, icon, logo, uncheckedBg, checkedBg }) => {
     });
 
     return (
-        <Grid
-            item
-            lg={3.75}
+        <Grid item lg={3.75}
             sx={{
                 marginTop: '-1px',
                 marginX: '7.5px',
@@ -51,11 +49,7 @@ const ExpSet = ({ name, icon, logo, uncheckedBg, checkedBg }) => {
                 borderBottom: '1px solid black'
             }}
         >
-            <Grid
-                container
-                alignItems="center"
-            >
-
+            <Grid container alignItems="center" >
                 <Grid item container xs={1.25}
                     alignItems="center"
                     justifyContent="center"
