@@ -1,0 +1,15 @@
+.accordion-adv {
+
+        .accordion__button {
+            background-color: rgb(24, 24, 24);
+            color: white
+        }
+
+        .accordion__panel {
+            background-color: rgb(212, 212, 212);
+
+            .accordion__panel {
+                background-color: rgb(255, 255, 255);
+            }
+        }
+}

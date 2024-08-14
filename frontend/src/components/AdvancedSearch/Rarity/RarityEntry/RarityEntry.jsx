@@ -3,7 +3,7 @@ import { Grid, Typography, styled } from "@mui/material"
 import Checkbox from '@mui/material/Checkbox';
 
 
-const index = ({ name, icon }) => {
+const RarityEntry = ({ name, icon }) => {
     const [checked, setChecked] = useState(false);
 
     const Img = styled('img')({
@@ -66,4 +66,4 @@ const index = ({ name, icon }) => {
     )
 }
 
-export default index
+export default RarityEntry

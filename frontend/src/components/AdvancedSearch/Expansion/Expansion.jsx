@@ -13,11 +13,10 @@ import {
 import 'react-accessible-accordion/dist/fancy-example.css'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import ExpSet from './ExpSet/ExpSet';
-import './Expansion.scss'
 
-const index = () => {
+const Expansion = () => {
     return (
-        <Accordion className="accordion-expansion" allowMultipleExpanded allowZeroExpanded>
+        <Accordion className="accordion-adv" allowMultipleExpanded allowZeroExpanded>
             <AccordionItem>
                 <AccordionItemHeading>
                     <AccordionItemButton>
@@ -29,13 +28,13 @@ const index = () => {
                         marginBottom: "1rem",
                     }}
                 >
-                    <Accordion className="accordion-expansion-inner" allowMultipleExpanded allowZeroExpanded>
+                    <Accordion className="accordion-adv-inner" allowMultipleExpanded allowZeroExpanded>
 
                         <AccordionItem>
                             <AccordionItemHeading>
                                 <AccordionItemButton>Scarlet & Violet</AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className="Mui-Accordion-Inner">
+                            <AccordionItemPanel>
                                 <Grid container paddingY={4}>
                                     <ExpSet name="Temporal Fates" icon="https://static.tcgcollector.com/content/content/images/01/ad/f3/01adf304feae3a089ca857a8e65faff4f49c26aca62b5604232a78fad660be8d.png" logo="https://tcg.pokemon.com/assets/img/sv-expansions/temporal-forces/logo/en-us/sv5-logo.png" uncheckedBg="" checkedBg="" />
                                     <ExpSet name="Paldean Fates" icon="https://static.tcgcollector.com/content/content/images/96/3e/30/963e305d2bd496dd5098f5f46abe9e45c92dd0e70c1cce24216dd350b03b36d1.png" logo="https://tcg.pokemon.com/assets/img/sv-expansions/paldean-fates/logo/en-us/sv04pt5-logo.png" uncheckedBg="" checkedBg="" />
@@ -52,7 +51,7 @@ const index = () => {
                             <AccordionItemHeading>
                                 <AccordionItemButton>Sword & Shield</AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className="Mui-Accordion-Inner">
+                            <AccordionItemPanel>
                                 <Grid container paddingY={4}>
                                     <ExpSet name="Crown Zenith" icon="https://static.tcgcollector.com/content/images/55/01/2f/55012fdc1c11c3efe2c53605458103e760870fefa5e6e9d4ba667416b6a8b40e.png" logo="https://tcg.pokemon.com/assets/img/expansions/crown-zenith/global/logos/en-us/swsh12pt5-logo.png" uncheckedBg="" checkedBg="" />
                                     <ExpSet name="Silver Tempest" icon="https://static.tcgcollector.com/content/images/ee/3d/e9/ee3de90de9b0f6da7a497608e57e567354bd1522f97cf0d37a71bc08cd970a0a.png" logo="https://tcg.pokemon.com/assets/img/expansions/silver-tempest/global/logos/en-us/swsh12-logo.png" uncheckedBg="" checkedBg="" />
@@ -79,7 +78,7 @@ const index = () => {
                             <AccordionItemHeading>
                                 <AccordionItemButton>Sun & Moon</AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className="Mui-Accordion-Inner">
+                            <AccordionItemPanel>
                                 <Grid container paddingY={4}>
                                     <ExpSet name="Cosmic Eclipse" icon="https://static.tcgcollector.com/content/images/bb/ac/a6/bbaca6800b5302e433e4d7dba7bb31bc66ed7e7f4723b748efbbba7f89dc8e69.png" logo="https://www.pokemontcg.com/assets/cosmic-eclipse/img/logos/en-us/cosmic-eclipse.png" uncheckedBg="" checkedBg="" />
                                     <ExpSet name="Hidden Fates" icon="https://static.tcgcollector.com/content/images/12/5b/f8/125bf80a4a380a112eaff3c9c81cc5e4a70c4ede2ea4881884620b1d65b4b20b.png" logo="https://www.pokemontcg.com/assets/hidden-fates/img/logos/en-us/hidden-fates.png" uncheckedBg="" checkedBg="" />
@@ -105,7 +104,7 @@ const index = () => {
                             <AccordionItemHeading>
                                 <AccordionItemButton>XY</AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className="Mui-Accordion-Inner">
+                            <AccordionItemPanel>
                                 <Grid container paddingY={4}>
                                     <ExpSet name="Evolutions" icon="https://static.tcgcollector.com/content/images/c6/47/6a/c6476aaa96bc87cbf5a387e59b094f5f6b39fd1009f724b5d08cab8e70fc4da2.png" logo="https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/series/xy_series/xy12/xy12-logo-169-en.png" uncheckedBg="" checkedBg="" />
                                     <ExpSet name="Steam Siege" icon="https://static.tcgcollector.com/content/images/4d/91/34/4d9134bc1ee19c7f1200fa872b87b3cf7948d615215c080522a63ec28914e674.png" logo="https://www.pokemon.com/static-assets/content-assets/cms2/img/trading-card-game/series/xy_series/xy11/xy11-logo-169-en.png" uncheckedBg="" checkedBg="" />
@@ -130,7 +129,7 @@ const index = () => {
                             <AccordionItemHeading>
                                 <AccordionItemButton>Black & White</AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className="Mui-Accordion-Inner">
+                            <AccordionItemPanel>
                                 <Grid container paddingY={4}>
                                     <ExpSet name="Legendary Treasures" logo="https://archives.bulbagarden.net/media/upload/thumb/4/45/BW11_Logo_EN.png/180px-BW11_Logo_EN.png" icon="https://static.tcgcollector.com/content/images/eb/f9/a6/ebf9a6cefa92c463616be5d11641af7a15ff2d92f3ae1d858924435f52ab9476.png" uncheckedBg="" checkedBg="" />
                                     <ExpSet name="Plasma Blast" logo="https://archives.bulbagarden.net/media/upload/thumb/c/cc/BW10_Logo_EN.png/180px-BW10_Logo_EN.png" icon="https://static.tcgcollector.com/content/images/b5/5c/e7/b55ce7b93e64ed91b85acc7f3e765fa99b69bc9a61c40439c4e675874c8480f1.png" uncheckedBg="" checkedBg="" />
@@ -152,7 +151,7 @@ const index = () => {
                             <AccordionItemHeading>
                                 <AccordionItemButton>Call of Legends</AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className="Mui-Accordion-Inner">
+                            <AccordionItemPanel>
                                 <Grid container paddingY={4}>
                                     <ExpSet name="Call of Legends" logo="https://archives.bulbagarden.net/media/upload/thumb/b/b5/COL1_Logo_EN.png/180px-COL1_Logo_EN.png" icon="https://static.tcgcollector.com/content/images/e2/5f/26/e25f2644d84d0110ad41fdc764e43a8db4c707e76c3736b2c3ba2407f3410bde.png" uncheckedBg="" checkedBg="" />
                                 </Grid>
@@ -163,7 +162,7 @@ const index = () => {
                             <AccordionItemHeading>
                                 <AccordionItemButton>HeartGold & SoulSilver</AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className="Mui-Accordion-Inner">
+                            <AccordionItemPanel>
                                 <Grid container paddingY={4}>
                                     <ExpSet name="Triumphant" logo="https://archives.bulbagarden.net/media/upload/thumb/9/97/HS4_Logo_EN.png/180px-HS4_Logo_EN.png" icon="https://static.tcgcollector.com/content/images/72/1e/7d/721e7d752a0f69324ed1913a2f9d2d3e5f1248e74c595e4b12132ef786306ef8.png" uncheckedBg="" checkedBg="" />
                                     <ExpSet name="Undaunted" logo="https://archives.bulbagarden.net/media/upload/thumb/0/06/HS3_Logo_EN.png/180px-HS3_Logo_EN.png" icon="https://static.tcgcollector.com/content/images/c8/61/07/c861070429ac38bb6c2731703573fed8dd68a9ff73612b0d86a3d10b9b24a04f.png" uncheckedBg="" checkedBg="" />
@@ -177,7 +176,7 @@ const index = () => {
                             <AccordionItemHeading>
                                 <AccordionItemButton>Platinum</AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className="Mui-Accordion-Inner">
+                            <AccordionItemPanel>
                                 <Grid container paddingY={4}>
                                     <ExpSet name="Arceus" logo="https://archives.bulbagarden.net/media/upload/thumb/0/00/PL4_Logo_EN.png/180px-PL4_Logo_EN.png" icon="https://static.tcgcollector.com/content/images/6a/f5/f1/6af5f1f846c9dffcc537d30fc824d22b30ac60b05e6108f666c1b2c8d4197e32.png" uncheckedBg="" checkedBg="" />
                                     <ExpSet name="Supreme Victors" logo="https://archives.bulbagarden.net/media/upload/thumb/1/1b/PL3_Logo_EN.png/180px-PL3_Logo_EN.png" icon="https://static.tcgcollector.com/content/images/52/15/f3/5215f3b53e7ec7c4a5dc4d139af536b52b7ce3a0f0f480884927e5798cf34030.png" uncheckedBg="" checkedBg="" />
@@ -191,7 +190,7 @@ const index = () => {
                             <AccordionItemHeading>
                                 <AccordionItemButton>Diamond & Pearl</AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className="Mui-Accordion-Inner">
+                            <AccordionItemPanel>
                                 <Grid container paddingY={4}>
                                     <ExpSet name="Stormfront" logo="https://archives.bulbagarden.net/media/upload/thumb/d/d5/DP7_Logo_EN.png/180px-DP7_Logo_EN.png" icon="https://static.tcgcollector.com/content/images/c1/d0/b1/c1d0b1a1f191515c180da254e619e41724d459543016325cb61c2421d89cf7f1.png" uncheckedBg="" checkedBg="" />
                                     <ExpSet name="Legends Awakened" logo="https://archives.bulbagarden.net/media/upload/thumb/d/d7/DP6_Logo_EN.png/180px-DP6_Logo_EN.png" icon="https://static.tcgcollector.com/content/images/a0/72/e4/a072e4947003c37491218c42e64ecbc6181fb57fdd8eb076f792c18af655334f.png" uncheckedBg="" checkedBg="" />
@@ -208,7 +207,7 @@ const index = () => {
                             <AccordionItemHeading>
                                 <AccordionItemButton>EX</AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className="Mui-Accordion-Inner">
+                            <AccordionItemPanel>
                                 <Grid container paddingY={4}>
                                     <ExpSet name="EX Power Keepers" logo="https://archives.bulbagarden.net/media/upload/thumb/e/eb/EX16_Logo_EN.png/180px-EX16_Logo_EN.png" icon="https://static.tcgcollector.com/content/images/68/6a/27/686a279016197c67bfe22b2e942828d52d68228b024aecb7578eb539b561058f.png" uncheckedBg="" checkedBg="" />
                                     <ExpSet name="EX Dragon Frontiers" logo="https://archives.bulbagarden.net/media/upload/thumb/d/d4/EX15_Logo_EN.png/180px-EX15_Logo_EN.png" icon="https://static.tcgcollector.com/content/images/92/f6/b7/92f6b77b484f0edafb3776b88572351e74f3f2f60a1a3748b6375f887c156f04.png" uncheckedBg="" checkedBg="" />
@@ -234,7 +233,7 @@ const index = () => {
                             <AccordionItemHeading>
                                 <AccordionItemButton>e-Card</AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className="Mui-Accordion-Inner">
+                            <AccordionItemPanel>
                                 <Grid container paddingY={4}>
                                     <ExpSet name="Skyridge" logo="https://archives.bulbagarden.net/media/upload/thumb/b/b8/E3_Logo_EN.png/180px-E3_Logo_EN.png" icon="https://static.tcgcollector.com/content/images/62/61/86/626186019cda8ba1f035d94c8d76277e67dd2583bb2ded60b549b9ca53212291.png" uncheckedBg="" checkedBg="" />
                                     <ExpSet name="Aquapolis" logo="https://archives.bulbagarden.net/media/upload/thumb/0/0d/E2_Logo_EN.png/180px-E2_Logo_EN.png" icon="https://static.tcgcollector.com/content/images/08/a4/f3/08a4f3aebba72075fd1b842dcad155fdf688bd199e8daf0f85a206e059181c89.png" uncheckedBg="" checkedBg="" />
@@ -247,7 +246,7 @@ const index = () => {
                             <AccordionItemHeading>
                                 <AccordionItemButton>Legendary Collection</AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className="Mui-Accordion-Inner">
+                            <AccordionItemPanel>
                                 <Grid container paddingY={4}>
                                     <ExpSet name="Legendary Collection" logo="https://archives.bulbagarden.net/media/upload/thumb/8/81/Legendary_Collection_Logo.png/180px-Legendary_Collection_Logo.png" icon="https://static.tcgcollector.com/content/images/64/db/f9/64dbf91a7d92661907a97e867af3ad90d8f04b203b3ddb7057ccff35a92711c7.png" uncheckedBg="" checkedBg="" />
                                 </Grid>
@@ -258,7 +257,7 @@ const index = () => {
                             <AccordionItemHeading>
                                 <AccordionItemButton>Neo</AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className="Mui-Accordion-Inner">
+                            <AccordionItemPanel>
                                 <Grid container paddingY={4}>
                                     <ExpSet name="Neo Destiny" logo="https://archives.bulbagarden.net/media/upload/thumb/1/18/Neo_Destiny_Logo_EN.png/180px-Neo_Destiny_Logo_EN.png" icon="https://static.tcgcollector.com/content/images/06/2f/06/062f063656dd8fafeb900029216193d7fe87ff384632374a14bfbd575615aac7.png" uncheckedBg="" checkedBg="" />
                                     <ExpSet name="Neo Revelation" logo="https://archives.bulbagarden.net/media/upload/thumb/4/49/Neo_Revelation_Logo_EN.png/180px-Neo_Revelation_Logo_EN.png" icon="https://static.tcgcollector.com/content/images/f5/e6/fc/f5e6fc6c005f5e673f388eb1a9e965420b8fc05fa783d8c1fb01531d469bb4a9.png" uncheckedBg="" checkedBg="" />
@@ -272,7 +271,7 @@ const index = () => {
                             <AccordionItemHeading>
                                 <AccordionItemButton>Original</AccordionItemButton>
                             </AccordionItemHeading>
-                            <AccordionItemPanel className="Mui-Accordion-Inner">
+                            <AccordionItemPanel>
                                 <Grid container paddingY={4}>
                                     <ExpSet name="Gym Challenge" logo="https://archives.bulbagarden.net/media/upload/thumb/e/e0/Gym_Challenge_Logo.png/180px-Gym_Challenge_Logo.png" icon="https://static.tcgcollector.com/content/images/d0/14/5a/d0145a8c462868c5b278f4773bdb5d503b63276eeabc7dd5a09198f039ba66b6.png" uncheckedBg="" checkedBg="" />
                                     <ExpSet name="Gym Heroes" logo="https://archives.bulbagarden.net/media/upload/thumb/1/1b/Gym_Heroes_Logo.png/180px-Gym_Heroes_Logo.png" icon="https://static.tcgcollector.com/content/images/55/64/1d/55641d4a3bd0a75979516a75c7bf1943d507f293a30067fb818a5c3ee8495d95.png" uncheckedBg="" checkedBg="" />
@@ -292,4 +291,4 @@ const index = () => {
     )
 }
 
-export default index
+export default Expansion

@@ -55,6 +55,28 @@ const ExpSet = ({ name, icon, logo, uncheckedBg, checkedBg }) => {
                 container
                 alignItems="center"
             >
+
+                <Grid item container xs={1.25}
+                    alignItems="center"
+                    justifyContent="center"
+                >
+                    <Img2 src={icon} />
+                </Grid>
+                <Grid item container xs={4} lg={3}
+                    sx={{ borderRadius: '50%' }}
+                >
+                    <Img src={logo} />
+                </Grid>
+                <Grid item container xs={5} lg={6.25}
+                    alignItems="center"
+                    justifyContent="center"
+                >
+                    <Typography
+                        sx={{ fontSize: '14px' }}
+                    >
+                        {name}
+                    </Typography>
+                </Grid>
                 <Grid item container xs={1.35}
                     alignItems="center"
                     justifyContent="center"
@@ -65,25 +87,6 @@ const ExpSet = ({ name, icon, logo, uncheckedBg, checkedBg }) => {
                         inputProps={{ 'aria-label': `${name}` }}
                         color="primary" // Change the color to primary
                     />
-                </Grid>
-                <Grid item container xs={4} lg={3}
-                    sx={{ borderRadius: '50%' }}
-                >
-                    <Img src={logo} />
-                </Grid>
-                <Grid item container xs={5} lg={6}
-                    alignItems="center"
-                    justifyContent="center"
-                >
-                    <Typography
-                        sx={{ fontSize: '14px' }}
-                    >
-                        {name}
-                    </Typography>
-                </Grid>
-                <Grid item container xs={1}
-                    alignContent="flex-start">
-                    <Img2 src={icon} />
                 </Grid>
             </Grid>
         </Grid>
