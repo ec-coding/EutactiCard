@@ -10,26 +10,30 @@ import {
     Typography,
     TextField,
 } from '@mui/material';
-import SearchElement from '../SearchElement';
+import SearchElement from '../SearchElement/SearchElement';
 import AdvSearch from '../AdvancedSearch/AdvancedSearch';
 import { useContext, useState } from 'react';
 import CardContext from '../../contexts/CardContext';
 import './CardSearch.scss'
-import ElementContext from '../../contexts/ElementContext';
 
 const CardSearch = ({ }) => {
     const [cards, setCards] = useState([]);
     const [cardElement, changeCardElement] = useState('')
-    const [selectedElement, setSelectedElement] = useState(null);
-    const [elementContext, setElementContext] = useContext(ElementContext)
+    let selectedElements = [];
 
     // const itemsPerPage = 4
-    const handleElementChange = (element) => {
-        setSelectedElement(element);
+    const toggleElement = (element) => {
+        if (selectedElements.includes(element)) {
+            // Remove element from the context if unchecked
+            selectedElements = selectedElements.filter(el => el !== element);
+        } else {
+            // Add element to the context only if it doesn't already exist
+            selectedElements.push(element);
+        }
     };
 
     const submitClick = () => {
-        console.log(elementContext)
+        console.log(selectedElements)
         // fetch("https://api.pokemontcg.io/v2/cards/?q=set.id:base1")
         //     .then(res => res.json()) //parse response as json
         //     .then(response => {
@@ -137,17 +141,17 @@ const CardSearch = ({ }) => {
                             </Typography>
                         </Grid>
                         <Grid container gap={1} className="energy-type">
-                            <SearchElement elementName="grass" />
-                            <SearchElement elementName="fire" />
-                            <SearchElement elementName="water" />
-                            <SearchElement elementName="lightning" />
-                            <SearchElement elementName="fighting" />
-                            <SearchElement elementName="psychic" />
-                            <SearchElement elementName="colorless" />
-                            <SearchElement elementName="darkness" />
-                            <SearchElement elementName="metal" />
-                            <SearchElement elementName="fairy" />
-                            <SearchElement elementName="dragon" />
+                            <SearchElement elementName="grass" context="basicSearch" toggleElement={toggleElement} />
+                            <SearchElement elementName="fire" context="basicSearch" toggleElement={toggleElement} />
+                            <SearchElement elementName="water" context="basicSearch" toggleElement={toggleElement} />
+                            <SearchElement elementName="lightning" context="basicSearch" toggleElement={toggleElement} />
+                            <SearchElement elementName="fighting" context="basicSearch" toggleElement={toggleElement} />
+                            <SearchElement elementName="psychic" context="basicSearch" toggleElement={toggleElement} />
+                            <SearchElement elementName="colorless" context="basicSearch" toggleElement={toggleElement} />
+                            <SearchElement elementName="darkness" context="basicSearch" toggleElement={toggleElement} />
+                            <SearchElement elementName="metal" context="basicSearch" toggleElement={toggleElement} />
+                            <SearchElement elementName="fairy" context="basicSearch" toggleElement={toggleElement} />
+                            <SearchElement elementName="dragon" context="basicSearch" toggleElement={toggleElement} />
                         </Grid>
                     </Grid>
 

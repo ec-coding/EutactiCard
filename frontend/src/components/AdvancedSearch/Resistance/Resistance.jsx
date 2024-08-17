@@ -11,7 +11,7 @@ import {
 } from 'react-accessible-accordion';
 import 'react-accessible-accordion/dist/fancy-example.css'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import SearchElement from '../../SearchElement';
+import SearchElement from '../../SearchElement/SearchElement';
 
 const Resistance = () => {
     return (
@@ -26,17 +26,17 @@ const Resistance = () => {
                     <Accordion allowMultipleExpanded allowZeroExpanded>
                         <AccordionItemPanel>
                             <Grid container gap={1} className="energy-type" paddingX={35}>
-                                <SearchElement elementName="grass" />
-                                <SearchElement elementName="fire" />
-                                <SearchElement elementName="water" />
-                                <SearchElement elementName="lightning" />
-                                <SearchElement elementName="fighting" />
-                                <SearchElement elementName="psychic" />
-                                <SearchElement elementName="colorless" />
-                                <SearchElement elementName="darkness" />
-                                <SearchElement elementName="metal" />
-                                <SearchElement elementName="fairy" />
-                                <SearchElement elementName="dragon" />
+                                <SearchElement elementName="grass" context="resistance" />
+                                <SearchElement elementName="fire" context="resistance" />
+                                <SearchElement elementName="water" context="resistance" />
+                                <SearchElement elementName="lightning" context="resistance" />
+                                <SearchElement elementName="fighting" context="resistance" />
+                                <SearchElement elementName="psychic" context="resistance" />
+                                <SearchElement elementName="colorless" context="resistance" />
+                                <SearchElement elementName="darkness" context="resistance" />
+                                <SearchElement elementName="metal" context="resistance" />
+                                <SearchElement elementName="fairy" context="resistance" />
+                                <SearchElement elementName="dragon" context="resistance" />
                             </Grid>
                         </AccordionItemPanel>
                     </Accordion>

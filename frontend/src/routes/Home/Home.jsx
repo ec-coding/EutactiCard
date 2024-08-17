@@ -12,15 +12,13 @@ import {
     useMediaQuery
 } from '@mui/material';
 import CardSearch from '../../components/CardSearch/CardSearch';
-import LatestDecks from '../../components/LatestDecks';
-import ElementContext from '../../contexts/ElementContext';
+import LatestDecks from '../../components/LatestDecks/LatestDecks';
 
 const Home = () => {
     const changeElements = useState([])
 
     return (
         <>
-            <ElementContext.Provider value={changeElements}>
                 <Container maxWidth={false} disableGutters>
                     <Grid
                         alignContent={'center'}
@@ -42,7 +40,6 @@ const Home = () => {
                         </Grid>
                     </Grid>
                 </Container>
-                </ElementContext.Provider>
         </>
     )
 }

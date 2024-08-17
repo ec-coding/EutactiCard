@@ -1,34 +1,12 @@
-import React, { useCallback, useContext, useEffect, useState } from 'react';
+import React, { memo, useCallback, useContext, useEffect, useState } from 'react';
 import { Card, FormControlLabel, Grid, Typography } from "@mui/material"
 import Checkbox from '@mui/material/Checkbox';
 import Switch from '@mui/material/Switch';
-import ElementContext from '../contexts/ElementContext';
 
-const SearchElement = ({ elementName }) => {
-    const [checked, setChecked] = useState(false);
-    const [element, setElement] = useState(elementName);
-    const [elementContext, setElementContext] = useContext(ElementContext)
-
-    useEffect(() => {
-        const updateContext = () => {
-            if (checked) {
-                // Add element to the context only if it doesn't already exist
-                setElementContext((prevContext) => {
-                    if (prevContext.includes(element)) return prevContext;
-                    return [...prevContext, element];
-                });
-            } else {
-                // Remove element from the context if unchecked
-                setElementContext((prevContext) => prevContext.filter(el => el !== element));
-            }
-        };
-        updateContext();
-    }, [checked, element, setElementContext]);
-
-    const handleChange = useCallback(() => {
-        setChecked((prev) => !prev);
-        setElement(elementName);
-    }, [elementName]);
+const SearchElement = ({ elementName, toggleElement, context }) => {
+    const handleChange = () => {
+        toggleElement(elementName);
+    };
 
     const background = (() => {
         switch (elementName) {
@@ -107,6 +85,6 @@ const SearchElement = ({ elementName }) => {
             </Card>
         </Grid>
     )
-}
+};
 
 export default SearchElement

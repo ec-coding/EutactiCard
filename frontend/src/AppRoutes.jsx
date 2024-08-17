@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 
-import Home from './routes/Home';
+import Home from './routes/Home/Home';
 
 function AppRoutes() {
 	// route list is an array of objects that contain the path and the component

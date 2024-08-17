@@ -2,25 +2,7 @@ import React, { useState } from 'react';
 import { Card, Grid, Typography, styled } from "@mui/material"
 import Checkbox from '@mui/material/Checkbox';
 
-const ExpSet = ({ name, icon, logo, uncheckedBg, checkedBg }) => {
-    const [checked, setChecked] = useState(false);
-    const [background, setBackground] = useState(uncheckedBg);
-
-    const handleChange = (event) => {
-        setChecked(event.target.checked);
-        updateElementBg(event.target.checked);
-    };
-
-    const updateElementBg = (isChecked) => {
-
-        if (isChecked === false) {
-
-            setBackground(uncheckedBg)
-        } else {
-
-            setBackground(checkedBg)
-        }
-    }
+const ExpSet = ({ name, icon, logo }) => {
 
     const Img = styled('img')({
         margin: 'auto',
@@ -76,8 +58,6 @@ const ExpSet = ({ name, icon, logo, uncheckedBg, checkedBg }) => {
                     justifyContent="center"
                 >
                     <Checkbox
-                        checked={checked}
-                        onChange={handleChange}
                         inputProps={{ 'aria-label': `${name}` }}
                         color="primary" // Change the color to primary
                     />

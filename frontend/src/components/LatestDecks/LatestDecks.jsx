@@ -10,7 +10,7 @@ import {
     Typography
   } from '@mui/material';
   import { Link, useLocation } from 'react-router-dom';
-  import MobileMenu from './MobileMenu';
+  import MobileMenu from '../MobileMenu/MobileMenu';
   
   const LatestDecks = () => {
 
