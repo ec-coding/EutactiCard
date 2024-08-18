@@ -13,7 +13,7 @@ import 'react-accessible-accordion/dist/fancy-example.css'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import SearchElement from '../../SearchElement/SearchElement';
 
-const Resistance = () => {
+const Resistance = ({ resistanceData }) => {
     return (
         <Accordion className="accordion-adv" allowMultipleExpanded allowZeroExpanded>
             <AccordionItem>
@@ -26,17 +26,17 @@ const Resistance = () => {
                     <Accordion allowMultipleExpanded allowZeroExpanded>
                         <AccordionItemPanel>
                             <Grid container gap={1} className="energy-type" paddingX={35}>
-                                <SearchElement elementName="grass" context="resistance" />
-                                <SearchElement elementName="fire" context="resistance" />
-                                <SearchElement elementName="water" context="resistance" />
-                                <SearchElement elementName="lightning" context="resistance" />
-                                <SearchElement elementName="fighting" context="resistance" />
-                                <SearchElement elementName="psychic" context="resistance" />
-                                <SearchElement elementName="colorless" context="resistance" />
-                                <SearchElement elementName="darkness" context="resistance" />
-                                <SearchElement elementName="metal" context="resistance" />
-                                <SearchElement elementName="fairy" context="resistance" />
-                                <SearchElement elementName="dragon" context="resistance" />
+                                <SearchElement elementName="grass" context="resistance" resistanceData={resistanceData} />
+                                <SearchElement elementName="fire" context="resistance" resistanceData={resistanceData} />
+                                <SearchElement elementName="water" context="resistance" resistanceData={resistanceData} />
+                                <SearchElement elementName="lightning" context="resistance" resistanceData={resistanceData} />
+                                <SearchElement elementName="fighting" context="resistance" resistanceData={resistanceData} />
+                                <SearchElement elementName="psychic" context="resistance" resistanceData={resistanceData} />
+                                <SearchElement elementName="colorless" context="resistance" resistanceData={resistanceData} />
+                                <SearchElement elementName="darkness" context="resistance" resistanceData={resistanceData} />
+                                <SearchElement elementName="metal" context="resistance" resistanceData={resistanceData} />
+                                <SearchElement elementName="fairy" context="resistance" resistanceData={resistanceData} />
+                                <SearchElement elementName="dragon" context="resistance" resistanceData={resistanceData} />
                             </Grid>
                         </AccordionItemPanel>
                     </Accordion>

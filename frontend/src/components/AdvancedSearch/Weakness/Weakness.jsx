@@ -13,7 +13,8 @@ import 'react-accessible-accordion/dist/fancy-example.css'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import SearchElement from '../../SearchElement/SearchElement'
 
-const Weakness = () => {
+const Weakness = ({ weaknessData }) => {
+
     return (
         <Accordion className="accordion-adv" allowMultipleExpanded allowZeroExpanded>
             <AccordionItem>
@@ -26,17 +27,17 @@ const Weakness = () => {
                     <Accordion allowMultipleExpanded allowZeroExpanded>
                         <AccordionItemPanel>
                             <Grid container gap={1} className="energy-type" paddingX={35}>
-                                <SearchElement elementName="grass" context="weakness" />
-                                <SearchElement elementName="fire" context="weakness" />
-                                <SearchElement elementName="water" context="weakness" />
-                                <SearchElement elementName="lightning" context="weakness" />
-                                <SearchElement elementName="fighting" context="weakness" />
-                                <SearchElement elementName="psychic" context="weakness" />
-                                <SearchElement elementName="colorless" context="weakness" />
-                                <SearchElement elementName="darkness" context="weakness" />
-                                <SearchElement elementName="metal" context="weakness" />
-                                <SearchElement elementName="fairy" context="weakness" />
-                                <SearchElement elementName="dragon" context="weakness" />
+                                <SearchElement elementName="grass" context="weakness" weaknessData={weaknessData} />
+                                <SearchElement elementName="fire" context="weakness" weaknessData={weaknessData} />
+                                <SearchElement elementName="water" context="weakness" weaknessData={weaknessData} />
+                                <SearchElement elementName="lightning" context="weakness" weaknessData={weaknessData} />
+                                <SearchElement elementName="fighting" context="weakness" weaknessData={weaknessData} />
+                                <SearchElement elementName="psychic" context="weakness" weaknessData={weaknessData} />
+                                <SearchElement elementName="colorless" context="weakness" weaknessData={weaknessData} />
+                                <SearchElement elementName="darkness" context="weakness" weaknessData={weaknessData} />
+                                <SearchElement elementName="metal" context="weakness" weaknessData={weaknessData} />
+                                <SearchElement elementName="fairy" context="weakness" weaknessData={weaknessData} />
+                                <SearchElement elementName="dragon" context="weakness" weaknessData={weaknessData} />
                             </Grid>
                         </AccordionItemPanel>
                     </Accordion>

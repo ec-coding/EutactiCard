@@ -19,21 +19,73 @@ import './CardSearch.scss'
 const CardSearch = ({ }) => {
     const [cards, setCards] = useState([]);
     const [cardElement, changeCardElement] = useState('')
-    let selectedElements = [];
+    let basicSearchElements = [];
+    let typeEntries = [];
+    let rarityEntries = [];
+    let hitPointRange = [];
+    let retreatCostRange = [];
+    let weaknessElements = [];
+    let resistanceElements = [];
 
     // const itemsPerPage = 4
-    const toggleElement = (element) => {
-        if (selectedElements.includes(element)) {
+    const toggleElement = (element, context) => {
+        if (basicSearchElements.includes(element)) {
             // Remove element from the context if unchecked
-            selectedElements = selectedElements.filter(el => el !== element);
+            basicSearchElements = basicSearchElements.filter(el => el !== element);
         } else {
             // Add element to the context only if it doesn't already exist
-            selectedElements.push(element);
+            basicSearchElements.push(element);
         }
     };
 
+    const toggleType = (type) => {
+        if (typeEntries.includes(type)) {
+            typeEntries = typeEntries.filter(ty => ty !== type);
+        } else {
+            typeEntries.push(type);
+        }
+    };
+
+    const toggleRarity = (rarity) => {
+        if (rarityEntries.includes(rarity)) {
+            rarityEntries = rarityEntries.filter(ra => ra !== rarity);
+        } else {
+            rarityEntries.push(rarity);
+        }
+    };
+
+    const toggleHitPoints = (hitPoints) => {
+        hitPointRange = hitPoints
+    };
+
+    const toggleRetreatCost = (retreatCost) => {
+        retreatCostRange = retreatCost
+    };
+
+    const toggleWeakness = (element, context) => {
+        if (weaknessElements.includes(element)) {
+            weaknessElements = weaknessElements.filter(el => el !== element);
+        } else {
+            weaknessElements.push(element);
+        }
+    }
+
+    const toggleResistance = (element, context) => {
+        if (resistanceElements.includes(element)) {
+            resistanceElements = resistanceElements.filter(el => el !== element);
+        } else {
+            resistanceElements.push(element);
+        }
+    }
+
     const submitClick = () => {
-        console.log(selectedElements)
+        console.log(`Basic Search: ` + basicSearchElements)
+        console.log(`Type: ` + typeEntries)
+        console.log(`Rarity: ` + rarityEntries)
+        console.log(`HP: ` + hitPointRange)
+        console.log(`Retreat Cost: ` + retreatCostRange)
+        console.log(`Weaknesses: ` + weaknessElements)
+        console.log(`Resistances: ` + resistanceElements)
         // fetch("https://api.pokemontcg.io/v2/cards/?q=set.id:base1")
         //     .then(res => res.json()) //parse response as json
         //     .then(response => {
@@ -50,7 +102,6 @@ const CardSearch = ({ }) => {
         setGrassChecked(newState);
         console.log(setGrassChecked)
     };
-
 
     const filterHeader = {
         fontSize: '1.35rem',
@@ -233,7 +284,14 @@ const CardSearch = ({ }) => {
 
             <Grid item lg={12} my={5} mx="auto">
                 <Grid item sm={12}>
-                    <AdvSearch />
+                    <AdvSearch
+                        typeData={toggleType}
+                        rarityData={toggleRarity}
+                        hitPointData={toggleHitPoints}
+                        retreatCostData={toggleRetreatCost}
+                        weaknessData={toggleWeakness}
+                        resistanceData={toggleResistance}
+                    />
                 </Grid>
             </Grid>
 

@@ -3,8 +3,11 @@ import { Grid, Typography, styled } from "@mui/material"
 import Checkbox from '@mui/material/Checkbox';
 
 
-const RarityEntry = ({ name, icon }) => {
-    const [checked, setChecked] = useState(false);
+const RarityEntry = ({ name, icon, rarityData }) => {
+
+    const handleChange = () => {
+        rarityData(name);
+    }
 
     const Img = styled('img')({
         margin: 'auto',
@@ -15,11 +18,6 @@ const RarityEntry = ({ name, icon }) => {
         objectFit: 'cover',
         objectPosition: 'center',
         background: 'none'
-    });
-
-    const Img2 = styled('img')({
-        maxWidth: '25px',
-        maxHeight: '25px',
     });
 
     return (
@@ -42,15 +40,19 @@ const RarityEntry = ({ name, icon }) => {
                 container
                 alignItems="center"
             >
-                <Img2 src={icon} />
+                <Img
+                    sx={{
+                        maxWidth: '25px',
+                        maxHeight: '25px',
+                    }}
+                    src={icon} />
             </Grid>
             <Grid item sm={2}
                 marginRight="12.5px"
             >
                 <Checkbox
-                    checked={checked}
-                    inputProps={{ 'aria-label': `${name}` }}
-                    color="primary" // Change the color to primary
+                    color="default"
+                    onClick={handleChange}
                 />
             </Grid>
 

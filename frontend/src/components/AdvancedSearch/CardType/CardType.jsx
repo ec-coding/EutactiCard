@@ -10,9 +10,9 @@ import {
     AccordionItemPanel,
 } from 'react-accessible-accordion';
 import 'react-accessible-accordion/dist/fancy-example.css'
-import TypeEntry from './TypeEntry';
+import TypeEntry from './TypeEntry/TypeEntry';
 
-const CardType = () => {
+const CardType = ({ typeData }) => {
     return (
         <Accordion className="accordion-adv" allowMultipleExpanded allowZeroExpanded>
             <AccordionItem>
@@ -29,7 +29,7 @@ const CardType = () => {
                             </AccordionItemHeading>
                             <AccordionItemPanel>
                                 <Grid container gap={1.25} paddingY={4}>
-                                    <TypeEntry name="Pokémon" logo="" icon="" uncheckedBg="" checkedBg="" />
+                                    <TypeEntry name="Pokémon" logo="" icon="" typeData={typeData} />
                                 </Grid>
                             </AccordionItemPanel>
                         </AccordionItem>
@@ -40,7 +40,7 @@ const CardType = () => {
                             </AccordionItemHeading>
                             <AccordionItemPanel>
                                 <Grid container gap={1.25} paddingY={4}>
-                                    <TypeEntry name="Trainer" logo="" icon="" uncheckedBg="" checkedBg="" />
+                                    <TypeEntry name="Trainer" logo="" icon="" typeData={typeData} />
                                 </Grid>
                             </AccordionItemPanel>
                         </AccordionItem>
@@ -51,7 +51,7 @@ const CardType = () => {
                             </AccordionItemHeading>
                             <AccordionItemPanel>
                                 <Grid container gap={1.25} paddingY={4}>
-                                    <TypeEntry name="Energy" logo="" icon="" uncheckedBg="" checkedBg="" />
+                                    <TypeEntry name="Energy" logo="" icon="" typeData={typeData} />
                                 </Grid>
                             </AccordionItemPanel>
                         </AccordionItem>

@@ -11,11 +11,12 @@ import {
 import 'react-accessible-accordion/dist/fancy-example.css'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-const RetreatCost = () => {
+const RetreatCost = ({ retreatCostData }) => {
     const [value, setValue] = React.useState([0, 5]);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
+        retreatCostData(value)
     };
 
     function valuetext(value) {
@@ -34,6 +35,18 @@ const RetreatCost = () => {
                     <Accordion allowMultipleExpanded allowZeroExpanded>
                         <AccordionItemPanel>
                             <Grid container justifyContent="center" alignContent="flex-start">
+                                <Grid container justifyContent="center" sx={{ width: 730 }}>
+                                    <Grid xs={6} item>
+                                        <Typography variant="h6" textAlign="start">
+                                            {value[0]}
+                                        </Typography>
+                                    </Grid>
+                                    <Grid xs={6} item>
+                                        <Typography variant="h6" textAlign="end">
+                                            {value[1]}
+                                        </Typography>
+                                    </Grid>
+                                </Grid>
                                 <Box sx={{ width: 720 }}>
                                     <Slider
                                         getAriaLabel={() => 'Retreat Cost'}

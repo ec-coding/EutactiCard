@@ -3,9 +3,17 @@ import { Card, FormControlLabel, Grid, Typography } from "@mui/material"
 import Checkbox from '@mui/material/Checkbox';
 import Switch from '@mui/material/Switch';
 
-const SearchElement = ({ elementName, toggleElement, context }) => {
+const SearchElement = ({ elementName, context, toggleElement, weaknessData, resistanceData }) => {
+
     const handleChange = () => {
-        toggleElement(elementName);
+        if (context === "basicSearch") {
+            toggleElement(elementName, context);
+        } else if (context === "weakness") {
+            weaknessData(elementName, context)
+        } else if (context === "resistance") {
+            resistanceData(elementName, context)
+        }
+
     };
 
     const background = (() => {

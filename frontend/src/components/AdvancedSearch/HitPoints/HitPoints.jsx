@@ -11,11 +11,12 @@ import {
 import 'react-accessible-accordion/dist/fancy-example.css'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
-const index = () => {
+const HitPoints = ({ hitPointData }) => {
     const [value, setValue] = React.useState([0, 340]);
 
     const handleChange = (event, newValue) => {
         setValue(newValue);
+        hitPointData(value)
     };
 
     function valuetext(value) {
@@ -34,6 +35,18 @@ const index = () => {
                     <Accordion allowMultipleExpanded allowZeroExpanded>
                         <AccordionItemPanel>
                             <Grid container justifyContent="center" alignContent="flex-start">
+                                <Grid container justifyContent="center" sx={{ width: 730 }}>
+                                    <Grid xs={6} item>
+                                        <Typography variant="h6" textAlign="start">
+                                            {value[0]}
+                                        </Typography>
+                                    </Grid>
+                                    <Grid xs={6} item>
+                                        <Typography variant="h6" textAlign="end">
+                                            {value[1]}
+                                        </Typography>
+                                    </Grid>
+                                </Grid>
                                 <Box sx={{ width: 720 }}>
                                     <Slider
                                         getAriaLabel={() => 'HP'}
@@ -55,4 +68,4 @@ const index = () => {
     )
 }
 
-export default index
+export default HitPoints

@@ -13,9 +13,9 @@ import {
 } from '@mui/material';
 import CardSearch from '../../components/CardSearch/CardSearch';
 import LatestDecks from '../../components/LatestDecks/LatestDecks';
+import SplashScreen from '../../components/SplashScreen';
 
 const Home = () => {
-    const changeElements = useState([])
 
     return (
         <>
@@ -35,6 +35,7 @@ const Home = () => {
                         marginX={'auto'}
                     >
                         <Grid sx={{ maxWidth: 1280 }} mx={'auto'}>
+                            <SplashScreen />
                             <CardSearch />
                             <LatestDecks />
                         </Grid>

@@ -3,25 +3,11 @@ import { Grid, Typography, styled } from "@mui/material"
 import Checkbox from '@mui/material/Checkbox';
 
 
-const index = ({ name, icon, logo, uncheckedBg, checkedBg }) => {
-    const [checked, setChecked] = useState(false);
-    const [background, setBackground] = useState(uncheckedBg);
+const TypeEntry = ({ name, icon, logo, typeData }) => {
 
-    const handleChange = (event) => {
-        setChecked(event.target.checked);
-        updateElementBg(event.target.checked);
+    const handleChange = () => {
+        typeData(name)
     };
-
-    const updateElementBg = (isChecked) => {
-
-        if (isChecked === false) {
-
-            setBackground(uncheckedBg)
-        } else {
-
-            setBackground(checkedBg)
-        }
-    }
 
     const Img = styled('img')({
         margin: 'auto',
@@ -67,7 +53,6 @@ const index = ({ name, icon, logo, uncheckedBg, checkedBg }) => {
                     marginRight="4px"
                 >
                     <Checkbox
-                        checked={checked}
                         onChange={handleChange}
                         inputProps={{ 'aria-label': `${name}` }}
                         color="primary" // Change the color to primary
@@ -89,4 +74,4 @@ const index = ({ name, icon, logo, uncheckedBg, checkedBg }) => {
     )
 }
 
-export default index
+export default TypeEntry

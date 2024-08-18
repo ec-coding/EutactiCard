@@ -21,7 +21,7 @@ import Weakness from './Weakness/Weakness';
 import Resistance from './Resistance/Resistance';
 import './AdvancedSearch.scss'
 
-const AdvSearch = () => {
+const AdvSearch = ({ typeData, rarityData, hitPointData, retreatCostData, weaknessData, resistanceData }) => {
 
     return (
         <>
@@ -44,12 +44,12 @@ const AdvSearch = () => {
                         <Accordion allowMultipleExpanded allowZeroExpanded>
                             <Grid>
                                 <Expansion />
-                                <CardType />
-                                <Rarity />
-                                <HitPoints />
-                                <RetreatCost />
-                                <Weakness />
-                                <Resistance />
+                                <CardType typeData={typeData} />
+                                <Rarity rarityData={rarityData} />
+                                <HitPoints hitPointData={hitPointData} />
+                                <RetreatCost retreatCostData={retreatCostData} />
+                                <Weakness weaknessData={weaknessData} />
+                                <Resistance resistanceData={resistanceData} />
                             </Grid>
                         </Accordion>
                     </AccordionItemPanel>
