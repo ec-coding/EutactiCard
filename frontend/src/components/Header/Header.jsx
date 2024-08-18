@@ -48,9 +48,9 @@ const Header = () => {
   };
 
   return (
-    <div>
+    <Grid>
       <AppBar position="static" color="default">
-        <Grid container justifyContent="center"
+        <Grid container justifyContent="center" paddingY={0.5}
           sx={{
             background: 'linear-gradient(to bottom, #E83838 60%, #884041 100%)',
             // borderTop: '1px solid #ff6565',
@@ -133,7 +133,7 @@ const Header = () => {
           </Box>
         </Grid>
       </AppBar>
-    </div>
+    </Grid>
   )
 }
 

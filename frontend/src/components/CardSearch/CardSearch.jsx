@@ -131,7 +131,7 @@ const CardSearch = ({ }) => {
     }
 
     return (
-        <Grid container paddingX={0}>
+        <Grid container paddingY={7.5} paddingX={0}>
             <Grid marginBottom={2} textAlign="left">
                 <Typography variant="h4" color="white"
                     sx={{
@@ -282,8 +282,7 @@ const CardSearch = ({ }) => {
                 </Grid>
             </Grid>
 
-            <Grid item lg={12} my={5} mx="auto">
-                <Grid item sm={12}>
+            <Grid lg={12} marginTop={7.5} mx="auto">
                     <AdvSearch
                         typeData={toggleType}
                         rarityData={toggleRarity}
@@ -292,7 +291,6 @@ const CardSearch = ({ }) => {
                         weaknessData={toggleWeakness}
                         resistanceData={toggleResistance}
                     />
-                </Grid>
             </Grid>
 
             <Grid>

@@ -39,15 +39,13 @@ const Footer = () => {
     <Container
       maxWidth={false}
       disableGutters
-      sx={{
-      }}
     >
       <Grid
         container
         alignItems="center"
         spacing={2}
         sx={{
-          paddingY: '1rem',
+          paddingY: '1.5rem',
           background: 'linear-gradient(to bottom, #465DF0 0%, #1F2E93 100%)',
           // borderTop: '1px solid #0CF1FA',
           // borderBottom: '1px solid #0CF1FA'
