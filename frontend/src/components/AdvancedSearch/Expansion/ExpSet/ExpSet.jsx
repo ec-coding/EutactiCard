@@ -1,8 +1,13 @@
 import React, { useState } from 'react';
 import { Card, Grid, Typography, styled } from "@mui/material"
 import Checkbox from '@mui/material/Checkbox';
+import ImageManager from '../../../ImageManager/ImageManager';
 
-const ExpSet = ({ name, icon, logo }) => {
+const ExpSet = ({ name, exp, set, setID, setData }) => {
+
+    const handleChange = () => {
+        setData(setID)
+    };
 
     const Img = styled('img')({
         margin: 'auto',
@@ -20,6 +25,8 @@ const ExpSet = ({ name, icon, logo }) => {
         maxHeight: '25px',
     });
 
+    const iconPath = ImageManager.icons?.[`exp${exp}`]?.[`icon${set}`]
+    const logoPath = ImageManager.logos?.[`exp${exp}`]?.[`logo${set}`]
     return (
         <Grid item lg={3.75}
             sx={{
@@ -36,12 +43,12 @@ const ExpSet = ({ name, icon, logo }) => {
                     alignItems="center"
                     justifyContent="center"
                 >
-                    <Img2 src={icon} />
+                    <Img2 src={iconPath} />
                 </Grid>
                 <Grid item container xs={4} lg={3}
                     sx={{ borderRadius: '50%' }}
                 >
-                    <Img src={logo} />
+                    <Img src={logoPath} />
                 </Grid>
                 <Grid item container xs={5} lg={6.25}
                     alignItems="center"
@@ -58,6 +65,7 @@ const ExpSet = ({ name, icon, logo }) => {
                     justifyContent="center"
                 >
                     <Checkbox
+                        onChange={handleChange}
                         inputProps={{ 'aria-label': `${name}` }}
                         color="primary" // Change the color to primary
                     />

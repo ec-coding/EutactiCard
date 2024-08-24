@@ -34,7 +34,7 @@ const Home = () => {
                     }}
                     marginX={'auto'}
                 >
-                    <SplashScreen />
+                    {/* <SplashScreen /> */}
                     <Grid sx={{ maxWidth: 1280 }} mx={'auto'}>
 
                         <CardSearch />

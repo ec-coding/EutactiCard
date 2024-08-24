@@ -25,8 +25,8 @@ const RarityEntry = ({ name, icon, rarityData }) => {
             container
             item
             alignItems="center"
-            justifyContent="center"
-            lg={3}
+            justifyContent="space-between"
+            lg={2.5}
             sx={{
                 marginTop: '-1px',
                 marginX: '7.5px',
@@ -39,6 +39,7 @@ const RarityEntry = ({ name, icon, rarityData }) => {
             <Grid item sm={1.5}
                 container
                 alignItems="center"
+                marginLeft="0.25em"
             >
                 <Img
                     sx={{
@@ -47,23 +48,21 @@ const RarityEntry = ({ name, icon, rarityData }) => {
                     }}
                     src={icon} />
             </Grid>
-            <Grid item sm={2}
-                marginRight="12.5px"
-            >
-                <Checkbox
-                    color="default"
-                    onClick={handleChange}
-                />
-            </Grid>
-
-            <Grid item sm={5}>
+            <Grid item sm={6.5} textAlign="left">
                 <Typography
                     sx={{ fontSize: '14px' }}
                 >
                     {name}
                 </Typography>
             </Grid>
-
+            <Grid item sm={2}
+                marginRight="4px"
+            >
+                <Checkbox
+                    color="default"
+                    onClick={handleChange}
+                />
+            </Grid>
         </Grid>
     )
 }
