@@ -34,31 +34,31 @@ const HitPoints = ({ hitPointData }) => {
                 <AccordionItemPanel sx={{ marginBottom: "1rem" }}>
                     <Accordion allowMultipleExpanded allowZeroExpanded>
                         <AccordionItemPanel>
+                            <Grid marginY={2}>
+                                <Typography variant="body1">Between</Typography>
+                                <Typography variant="h6">{value[0]} - {value[1]}</Typography>
+                            </Grid>
                             <Grid container justifyContent="center" alignContent="flex-start">
-                                <Grid container justifyContent="center" sx={{ width: 730 }}>
-                                    <Grid xs={6} item>
-                                        <Typography variant="h6" textAlign="start">
-                                            {value[0]}
-                                        </Typography>
+                                <Grid container sx={{ width: 720 }}>
+                                    <Grid item xs={1.5}>
+                                        <Typography variant="h6">0</Typography>
                                     </Grid>
-                                    <Grid xs={6} item>
-                                        <Typography variant="h6" textAlign="end">
-                                            {value[1]}
-                                        </Typography>
+                                    <Grid item xs={9}>
+                                        <Slider
+                                            getAriaLabel={() => 'HP'}
+                                            value={value}
+                                            onChange={handleChange}
+                                            valueLabelDisplay="auto"
+                                            getAriaValueText={valuetext}
+                                            step={10} // Restrict increments to 10
+                                            min={0}
+                                            max={340}
+                                        />
+                                    </Grid>
+                                    <Grid item xs={1.5}>
+                                        <Typography variant="h6">340</Typography>
                                     </Grid>
                                 </Grid>
-                                <Box sx={{ width: 720 }}>
-                                    <Slider
-                                        getAriaLabel={() => 'HP'}
-                                        value={value}
-                                        onChange={handleChange}
-                                        valueLabelDisplay="auto"
-                                        getAriaValueText={valuetext}
-                                        step={10} // Restrict increments to 10
-                                        min={0}
-                                        max={340}
-                                    />
-                                </Box>
                             </Grid>
                         </AccordionItemPanel>
                     </Accordion>

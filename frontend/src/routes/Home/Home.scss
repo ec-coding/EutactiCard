@@ -1,0 +1,27 @@
+// .pageFlipperContainer {
+//     perspective: 1000px;
+// }
+
+// .pageFlipper {
+//     transition: 0.9s;
+//     transform-style: preserve-3d;
+//     position: relative;
+// }
+
+// .cardSearchContainer,
+// .cardResultsContainer {
+//     backface-visibility: hidden;
+// }
+
+// .cardSearchContainer {
+//     z-index: 2;
+//     transform: rotateY(0deg);
+// }
+
+// .cardResultsContainer {
+//     transform: rotateY(180deg);
+// }
+
+// .pageFlipperContainer.flipped .pageFlipper {
+//     transform: rotateY(180deg);
+// }

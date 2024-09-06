@@ -34,30 +34,30 @@ const RetreatCost = ({ retreatCostData }) => {
                 <AccordionItemPanel sx={{ marginBottom: "1rem" }}>
                     <Accordion allowMultipleExpanded allowZeroExpanded>
                         <AccordionItemPanel>
+                            <Grid marginY={2}>
+                                <Typography variant="body1">Between</Typography>
+                                <Typography variant="h6">{value[0]} - {value[1]}</Typography>
+                            </Grid>
                             <Grid container justifyContent="center" alignContent="flex-start">
-                                <Grid container justifyContent="center" sx={{ width: 730 }}>
-                                    <Grid xs={6} item>
-                                        <Typography variant="h6" textAlign="start">
-                                            {value[0]}
-                                        </Typography>
+                                <Grid container sx={{ width: 720 }}>
+                                    <Grid item xs={1.5}>
+                                        <Typography variant="h6">0</Typography>
                                     </Grid>
-                                    <Grid xs={6} item>
-                                        <Typography variant="h6" textAlign="end">
-                                            {value[1]}
-                                        </Typography>
+                                    <Grid item xs={9}>
+                                        <Slider
+                                            getAriaLabel={() => 'Retreat Cost'}
+                                            value={value}
+                                            onChange={handleChange}
+                                            valueLabelDisplay="auto"
+                                            getAriaValueText={valuetext}
+                                            min={0}
+                                            max={5}
+                                        />
+                                    </Grid>
+                                    <Grid item xs={1.5}>
+                                        <Typography variant="h6">5</Typography>
                                     </Grid>
                                 </Grid>
-                                <Box sx={{ width: 720 }}>
-                                    <Slider
-                                        getAriaLabel={() => 'Retreat Cost'}
-                                        value={value}
-                                        onChange={handleChange}
-                                        valueLabelDisplay="auto"
-                                        getAriaValueText={valuetext}
-                                        min={0}
-                                        max={5}
-                                    />
-                                </Box>
                             </Grid>
                         </AccordionItemPanel>
                     </Accordion>

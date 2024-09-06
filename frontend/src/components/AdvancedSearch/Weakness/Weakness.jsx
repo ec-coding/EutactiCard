@@ -26,7 +26,7 @@ const Weakness = ({ weaknessData }) => {
                 <AccordionItemPanel sx={{ marginBottom: "1rem" }}>
                     <Accordion allowMultipleExpanded allowZeroExpanded>
                         <AccordionItemPanel>
-                            <Grid container gap={1} className="energy-type" paddingX={35}>
+                            <Grid container xs={7} gap={1} mx="auto" className="energy-type" paddingX={2.5}>
                                 <SearchElement elementName="grass" context="weakness" weaknessData={weaknessData} />
                                 <SearchElement elementName="fire" context="weakness" weaknessData={weaknessData} />
                                 <SearchElement elementName="water" context="weakness" weaknessData={weaknessData} />

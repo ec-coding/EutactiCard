@@ -23,8 +23,8 @@ const CardType = ({ typeData }) => {
                 </AccordionItemHeading>
                 <AccordionItemPanel sx={{ marginBottom: "1rem" }}>
                     <Accordion allowMultipleExpanded allowZeroExpanded>
-                        <Grid container justifyContent="center" sx={{ background: "white" }} py={3}>
-                            <Grid item xs={5} sx={{ background: "white" }} >
+                        <Grid container justifyContent="center" sx={{ background: 'rgb(255, 255, 255, 0.65)' }} py={3}>
+                            <Grid item xs={5} >
                                 <Grid marginLeft={2.5} textAlign="left">
                                     <Typography variant="h6">Pokémon</Typography>
                                 </Grid>
@@ -58,7 +58,7 @@ const CardType = ({ typeData }) => {
                                     <TypeEntry name="VSTAR" logo="" icon="" typeData={typeData} />
                                 </Grid>
                             </Grid>
-                            <Grid item xs={2.65} sx={{ background: "white" }}>
+                            <Grid item xs={2.65}>
                                 <Grid marginLeft={2.5} textAlign="left">
                                     <Typography variant="h6">Trainer</Typography>
                                 </Grid>
@@ -73,7 +73,7 @@ const CardType = ({ typeData }) => {
                                     <TypeEntry name="Rocket's Secret Machine" logo="" icon="" typeData={typeData} />
                                 </Grid>
                             </Grid>
-                            <Grid item xs={2.65} sx={{ background: "white" }}>
+                            <Grid item xs={2.65}>
                                 <Grid marginLeft={2.5} textAlign="left">
                                     <Typography variant="h6">Energy</Typography>
                                 </Grid>

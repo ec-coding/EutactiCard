@@ -1,8 +1,8 @@
 .accordion-adv-search {
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.65);
 
     .accordion {
-        border: 1px solid black;
+        border: 1px solid rgba(224, 224, 224, 0.65);
         border-radius: 0;
     }
 
@@ -23,17 +23,24 @@
         .accordion-adv {
 
             .accordion__button {
-                background-color: rgb(24, 24, 24);
+                background-color: rgba(24, 24, 24, 0.75);
                 color: white
             }
 
             .accordion__panel {
-                background-color: rgb(212, 212, 212);
+                background-color: rgba(212, 212, 212, 0.65);
                 padding: 10px;
 
                 .accordion__panel {
-                    background-color: rgb(255, 255, 255);
+                    background-color: rgba(255, 255, 255);
                 }
+            }
+        }
+
+        .MuiGrid-root {
+
+            .MuiGrid-grid-xs-6 {
+                background-color: rgba(212, 212, 212, 0.65);
             }
         }
 

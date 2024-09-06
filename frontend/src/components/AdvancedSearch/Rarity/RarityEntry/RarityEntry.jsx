@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Grid, Typography, styled } from "@mui/material"
 import Checkbox from '@mui/material/Checkbox';
-
+import ImageManager from '../../../ImageManager/ImageManager';
 
 const RarityEntry = ({ name, icon, rarityData }) => {
 
@@ -14,7 +14,6 @@ const RarityEntry = ({ name, icon, rarityData }) => {
         display: 'block',
         maxWidth: '92px',
         maxHeight: '42px',
-        borderRadius: '4px',
         objectFit: 'cover',
         objectPosition: 'center',
         background: 'none'
@@ -41,14 +40,9 @@ const RarityEntry = ({ name, icon, rarityData }) => {
                 alignItems="center"
                 marginLeft="0.25em"
             >
-                <Img
-                    sx={{
-                        maxWidth: '25px',
-                        maxHeight: '25px',
-                    }}
-                    src={icon} />
+                <Img src={ImageManager.rarity?.[`${icon}`]} />
             </Grid>
-            <Grid item sm={6.5} textAlign="left">
+            <Grid item sm={7.5} textAlign="left">
                 <Typography
                     sx={{ fontSize: '14px' }}
                 >

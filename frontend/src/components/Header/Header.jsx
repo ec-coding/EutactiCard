@@ -19,40 +19,46 @@ const Header = () => {
   const isActiveLink = (path) => location.pathname === path;
 
   const activeLinkStyle = {
+    border: '1px solid rgb(0, 0, 0, 0.5)',
+    borderRadius: '0.25em',
+    padding: '0.15em 2em',
+    background: 'linear-gradient(to bottom, #465DF0 0%, #1F2E93 100%)',
     textTransform: 'none',
-    color: 'yellow',
+    color: 'white',
     fontWeight: 'bold',
     fontSize: 18,
     transition: 'color 0.3s ease',
-    marginLeft: 0.5,
-    marginRight: 0.5,
-    paddingY: 0.5,
-    paddingX: 1.5,
-    minWidth: 0,
     textShadow: '1.5px 1.5px 0 black',
+    boxShadow: 'inset -1.5px -1.5px 0 rgba(255, 255, 255, .75), inset 1.5px 1.5px 0 rgba(0, 0, 0, 0.75)'
   };
 
-  // Default link style
   const linkStyle = {
+    border: '1px solid rgb(0, 0, 0, 0.5)',
+    borderRadius: '0.25em',
+    padding: '0.15em 2em',
+    background: 'linear-gradient(to bottom, #E83838 60%, #884041 100%)',
     textTransform: 'none',
     color: 'white',
     fontWeight: 'normal',
     fontSize: 18,
     transition: 'color 0.3s ease',
-    marginLeft: 0.5,
-    marginRight: 0.5,
-    paddingY: 0.5,
-    paddingX: 1.5,
-    minWidth: 0,
     textShadow: '1.5px 1.5px 0 black',
+    boxShadow: 'inset 1.5px 1.5px 0 rgba(255, 255, 255, .75), inset -1.5px -1.5px 0 rgba(0, 0, 0, 0.75)'
   };
 
   return (
-    <Grid>
+    <Grid
+      sx={{
+        position: 'fixed',
+        zIndex: '1',
+        width: '100%'
+      }}
+    >
       <AppBar position="static" color="default">
         <Grid container justifyContent="center" paddingY={0.5}
           sx={{
-            background: 'linear-gradient(to bottom, #E83838 60%, #884041 100%)',
+            background: 'rgb(0, 0, 0, 0.1)'
+            // background: 'linear-gradient(to bottom, #E83838 60%, #884041 100%)',
             // borderTop: '1px solid #ff6565',
             // borderBottom: '1px solid #ff6565'
           }}
@@ -72,7 +78,7 @@ const Header = () => {
             <Grid container
               sx={{
               }}>
-              <Grid item lg={2} marginTop={1} container>
+              <Grid item lg={1.75} marginTop={1} container justifyContent="center">
                 <Link to="/">
                   <img
                     src="https://i.imgur.com/HgSy1Gq.png"
@@ -83,48 +89,48 @@ const Header = () => {
               </Grid>
               <MobileMenu />
               {!isMobile && ( // Render the following elements if viewport is not below 'sm' breakpoint
-                <Grid item lg={10} sx={{ display: 'flex', alignItems: 'center' }} justifyContent="space-between">
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                <Grid item lg={10.25} sx={{ display: 'flex', alignItems: 'center' }} justifyContent="space-between">
+                  <Box px={2} sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                     <Link to="/">
-                      <Button sx={isActiveLink('/') ? activeLinkStyle : linkStyle}>
+                      <Grid sx={isActiveLink('/') ? activeLinkStyle : linkStyle} >
                         Home
-                      </Button>
+                      </Grid>
                     </Link>
                     <Link to="/">
-                      <Button sx={isActiveLink('/Search') ? activeLinkStyle : linkStyle}>
+                      <Grid sx={isActiveLink('/Search') ? activeLinkStyle : linkStyle} >
                         Search
-                      </Button>
+                      </Grid>
                     </Link>
                     <Link to="/AboutUs">
-                      <Button sx={isActiveLink('/Expansions') ? activeLinkStyle : linkStyle}>
+                      <Grid sx={isActiveLink('/Decks') ? activeLinkStyle : linkStyle} >
                         My Decks
-                      </Button>
+                      </Grid>
                     </Link>
-                    <Link to="/Events">
+                    {/* <Link to="/Events">
                       <Button
                         sx={isActiveLink('/Backgrounds') ? activeLinkStyle : linkStyle}
                       >
                         My Collection
                       </Button>
-                    </Link>
-                    <Link to="/Simulator">
+                    </Link> */}
+                    {/* <Link to="/Simulator">
                       <Button
                         sx={isActiveLink('/Backgrounds') ? activeLinkStyle : linkStyle}
                       >
                         Draw Simulator
                       </Button>
-                    </Link>
+                    </Link> */}
                   </Box>
-                  <Box sx={{ display: 'flex', alignItems: 'right', gap: 1 }}>
+                  <Box mx={1} sx={{ display: 'flex', alignItems: 'right', gap: 1 }}>
                     <Link to="/">
-                      <Button sx={isActiveLink('/LogIn') ? activeLinkStyle : linkStyle}>
+                      <Grid sx={isActiveLink('/LogIn') ? activeLinkStyle : linkStyle}>
                         Log In
-                      </Button>
+                      </Grid>
                     </Link>
                     <Link to="/">
-                      <Button sx={isActiveLink('/SignUp') ? activeLinkStyle : linkStyle}>
+                      <Grid sx={isActiveLink('/SignUp') ? activeLinkStyle : linkStyle}>
                         Sign Up
-                      </Button>
+                      </Grid>
                     </Link>
                   </Box>
                 </Grid>

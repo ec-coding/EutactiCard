@@ -13,14 +13,31 @@ import {
 import './SplashScreen.scss'
 
 const SplashScreen = () => {
+
+  const splashPanel = {
+    height: '30rem',
+    width: '20rem',
+    margin: '0 1rem',
+    border: '5px solid white'
+  }
+
   return (
     <Grid className="splash-container"
       sx={{
         height: '95vh',
       }}
     >
-      <Grid className="splash-inner">
+      <Grid container className="splash-inner" justifyContent="center" alignItems="center">
 
+        <Grid sx={splashPanel}>
+          <Typography>Search Cards</Typography>
+        </Grid>
+        <Grid sx={splashPanel}>
+          <Typography>Adv Search</Typography>
+        </Grid>
+        <Grid sx={splashPanel}>
+          <Typography>Search Decks</Typography>
+        </Grid>
       </Grid>
     </Grid>
   )

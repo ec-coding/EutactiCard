@@ -31,8 +31,9 @@ const AdvSearch = ({ setData, typeData, rarityData, hitPointData, retreatCostDat
                         <AccordionItemHeading>
                             <AccordionItemButton
                                 style={{
-                                    backgroundColor: 'rgb(24, 24, 24)',
-                                    color: 'white',
+                                    backgroundColor: 'rgb(224, 224, 224)',
+                                    color: 'black',
+                                    // border: '0.25em solid white',
                                     textAlign: 'center',
                                     fontSize: '18px'
                                 }}>
@@ -42,16 +43,18 @@ const AdvSearch = ({ setData, typeData, rarityData, hitPointData, retreatCostDat
                     </Grid>
                     <AccordionItemPanel sx={{ marginBottom: "1rem" }}>
                         <Accordion allowMultipleExpanded allowZeroExpanded>
-                            <Grid>
-                                <Expansion setData={setData} />
-                                <CardType typeData={typeData} />
-                                <Rarity rarityData={rarityData} />
-                                <HitPoints hitPointData={hitPointData} />
-                                <RetreatCost retreatCostData={retreatCostData} />
-                                <Weakness weaknessData={weaknessData} />
-                                <Resistance resistanceData={resistanceData} />
-                            </Grid>
+                            <Expansion setData={setData} />
+                            <CardType typeData={typeData} />
+                            <Rarity rarityData={rarityData} />
+                            <HitPoints hitPointData={hitPointData} />
+                            <RetreatCost retreatCostData={retreatCostData} />
+                            <Weakness weaknessData={weaknessData} />
+                            <Resistance resistanceData={resistanceData} />
                         </Accordion>
+                        <Grid py={4} sx={{
+                    backgroundColor: 'rgb(224, 224, 224)',
+                }}>
+                </Grid>
                     </AccordionItemPanel>
                 </AccordionItem>
             </Accordion>

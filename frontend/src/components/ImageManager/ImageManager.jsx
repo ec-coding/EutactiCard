@@ -263,6 +263,21 @@ import orgLogo5 from '../../images/logo/original/team_rocket.png';
 import orgLogo6 from '../../images/logo/original/gym_heroes.png';
 import orgLogo7 from '../../images/logo/original/gym_challenge.png';
 
+// RARITY
+import commonIcon from '../../images/rarity/common.png'
+import uncommonIcon from '../../images/rarity/uncommon.png'
+import rareIcon from '../../images/rarity/rare.png'
+import rareHoloIcon from '../../images/rarity/rare_holo.png'
+import rareUltraIcon from '../../images/rarity/rare_ultra.png'
+import rareSecretIcon from '../../images/rarity/rare_secret.png'
+import aceSpecRareIcon from '../../images/rarity/ace_spec_rare.png'
+import amazingRareIcon from '../../images/rarity/amazing_rare.png'
+import doubleRareIcon from '../../images/rarity/double_rare.png'
+import hyperRareIcon from '../../images/rarity/hyper_rare.png'
+import illustrationRareIcon from '../../images/rarity/illustration_rare.png'
+import specialIllustrationRareIcon from '../../images/rarity/special_illustration_rare.png'
+import ultraRareIcon from '../../images/rarity/ultra_rare.png'
+import promoIcon from '../../images/rarity/promo.png'
 
 const ImageManager = {
     icons:{
@@ -556,8 +571,23 @@ const ImageManager = {
             logo6: orgLogo6,
             logo7: orgLogo7
         }
+    },
+    rarity:{
+            common: commonIcon,
+            uncommon: uncommonIcon,
+            rare: rareIcon,
+            rareHolo: rareHoloIcon,
+            rareUltra: rareUltraIcon,
+            rareSecret: rareSecretIcon,
+            aceSpec: aceSpecRareIcon,
+            amazingRare: amazingRareIcon,
+            doubleRare: doubleRareIcon,
+            hyperRare: hyperRareIcon,
+            illustrationRare: illustrationRareIcon,
+            specialIllustrationRare: specialIllustrationRareIcon,
+            ultraRare: ultraRareIcon,
+            promo: promoIcon
     }
-
 }
 
 export default ImageManager

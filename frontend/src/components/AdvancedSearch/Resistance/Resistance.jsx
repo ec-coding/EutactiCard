@@ -25,7 +25,7 @@ const Resistance = ({ resistanceData }) => {
                 <AccordionItemPanel sx={{ marginBottom: "1rem" }}>
                     <Accordion allowMultipleExpanded allowZeroExpanded>
                         <AccordionItemPanel>
-                            <Grid container gap={1} className="energy-type" paddingX={35}>
+                            <Grid container xs={7} gap={1} mx="auto" className="energy-type" paddingX={2.5}>
                                 <SearchElement elementName="grass" context="resistance" resistanceData={resistanceData} />
                                 <SearchElement elementName="fire" context="resistance" resistanceData={resistanceData} />
                                 <SearchElement elementName="water" context="resistance" resistanceData={resistanceData} />
