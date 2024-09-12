@@ -12,13 +12,13 @@ const CardResults = ({ searchResults }) => {
 
     return (
         <Grid container paddingY={2.5}>
-            <Grid paddingX={4.5}>
-                <Grid justifyContent="start">
-                    <Typography variant="h5" color="white">
+            <Grid>
+                <Grid justifyContent="start" paddingLeft={4.5}>
+                    <Typography variant="h4" color="white" textAlign="left">
                         Search Results
                     </Typography>
                 </Grid>
-                <Grid>
+                <Grid container my={3.5} justifyContent="center">
                     {searchResults && searchResults.map((card) => (
                         <Card key={card.id} card={card} />
                     ))}

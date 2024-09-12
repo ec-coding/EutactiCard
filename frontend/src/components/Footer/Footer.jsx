@@ -57,6 +57,7 @@ const Footer = () => {
               xl: '1280px'
             },
             margin: 'auto',
+            paddingX: '10px'
           }}
         >
           <Grid container gap={3} textAlign="left"

@@ -347,7 +347,7 @@ const CardSearch = ({ setSearchResults }) => {
                             <Grid sx={linkStyle} >
                                 Reset
                             </Grid>
-                            <Grid sx={linkStyle} >
+                            <Grid sx={linkStyle} onClick={submitClick} >
                                 Submit
                             </Grid>
                         </Grid>

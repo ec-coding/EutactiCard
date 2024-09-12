@@ -50,7 +50,7 @@ const Header = () => {
     <Grid
       sx={{
         position: 'fixed',
-        zIndex: '1',
+        zIndex: '2',
         width: '100%'
       }}
     >
